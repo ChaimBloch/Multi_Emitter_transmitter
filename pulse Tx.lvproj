@@ -38,6 +38,9 @@
 			<Item Name="array to data claster.vi" Type="VI" URL="../pulse_tx_vis/array to data claster.vi"/>
 			<Item Name="lfm_rate_calculate.vi" Type="VI" URL="../pulse_tx_vis/lfm_rate_calculate.vi"/>
 			<Item Name="pdw to raw PDW.vi" Type="VI" URL="../pulse_tx_vis/pdw to raw PDW.vi"/>
+			<Item Name="mode_type.ctl" Type="VI" URL="../pulse_tx_vis/mode_type.ctl"/>
+			<Item Name="set num to enum.vi" Type="VI" URL="../pulse_tx_vis/set num to enum.vi"/>
+			<Item Name="PDW gen.vi" Type="VI" URL="../pulse_tx_vis/PDW gen.vi"/>
 		</Item>
 		<Item Name="USRP 294xR; 295xR 200 MSps" Type="FPGA Target">
 			<Property Name="AutoRun" Type="Bool">false</Property>
@@ -2110,9 +2113,6 @@
 			</Item>
 		</Item>
 		<Item Name="tx poulse host.vi" Type="VI" URL="../pulse_tx_vis/tx poulse host.vi"/>
-		<Item Name="PDW gen.vi" Type="VI" URL="../pulse_tx_vis/PDW gen.vi"/>
-		<Item Name="mode_type.ctl" Type="VI" URL="../pulse_tx_vis/mode_type.ctl"/>
-		<Item Name="set num to enum.vi" Type="VI" URL="../pulse_tx_vis/set num to enum.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Property Name="NI.SortType" Type="Int">2</Property>
 			<Item Name="instr.lib" Type="Folder">
