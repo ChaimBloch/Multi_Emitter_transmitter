@@ -2032,6 +2032,9 @@
 					<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 					<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 				</Item>
+				<Item Name="array to data claster.vi" Type="VI" URL="../pulse_tx_vis/array to data claster.vi"/>
+				<Item Name="mode_type.ctl" Type="VI" URL="../pulse_tx_vis/mode_type.ctl"/>
+				<Item Name="set num to enum.vi" Type="VI" URL="../pulse_tx_vis/set num to enum.vi"/>
 			</Item>
 			<Item Name="Build Specifications" Type="Build">
 				<Item Name="pulse_Tx_one_channel" Type="{F4C5E96F-7410-48A5-BB87-3559BC9B167F}">
