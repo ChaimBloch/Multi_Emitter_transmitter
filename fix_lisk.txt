@@ -1,1 +1,0 @@
-add multiplaier for LFM (for very slow LFM)
