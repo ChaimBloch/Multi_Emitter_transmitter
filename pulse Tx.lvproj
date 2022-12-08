@@ -2007,6 +2007,13 @@ PXIe_Clk100ResourceName=PXIe_Clk100;TopSignalConnect=PxieClk100;ClockSignalName=
 			<Item Name="gen random emmiters.vi" Type="VI" URL="../pulse_tx_vis/gen random emmiters.vi"/>
 			<Item Name="data to file.vi" Type="VI" URL="../pulse_tx_vis/data to file.vi"/>
 			<Item Name="get filter mode.vi" Type="VI" URL="../fpga/vis/get filter mode.vi"/>
+			<Item Name="P2P_vst_ini.vi" Type="VI" URL="../pulse_tx_vis/P2P_vst_ini.vi"/>
+			<Item Name="fpga status vst p2p.vi" Type="VI" URL="../pulse_tx_vis/fpga status vst p2p.vi"/>
+			<Item Name="sync_and_trig_p2p.vi" Type="VI" URL="../pulse_tx_vis/sync_and_trig_p2p.vi"/>
+			<Item Name="collect pulses.vi" Type="VI" URL="../pulse_tx_vis/collect pulses.vi"/>
+			<Item Name="pdw 2 graph.vi" Type="VI" URL="../pulse_tx_vis/pdw 2 graph.vi"/>
+			<Item Name="close all p2p.vi" Type="VI" URL="../pulse_tx_vis/close all p2p.vi"/>
+			<Item Name="fpga status 1 ch.vi" Type="VI" URL="../pulse_tx_vis/fpga status 1 ch.vi"/>
 		</Item>
 		<Item Name="vis" Type="Folder">
 			<Item Name="find device.vi" Type="VI" URL="../vis/find device.vi"/>
@@ -3980,6 +3987,24 @@ PXIe_Clk100ResourceName=PXIe_Clk100;TopSignalConnect=PxieClk100;ClockSignalName=
 					<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 					<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 				</Item>
+				<Item Name="array to data claster.vi" Type="VI" URL="../fpga/vis/array to data claster.vi"/>
+				<Item Name="Count Up U16.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/Basic Elements/v1/FPGA/Private/Count Up U16.vi"/>
+				<Item Name="Count Up U32.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/Basic Elements/v1/FPGA/Private/Count Up U32.vi"/>
+				<Item Name="Count Up U64.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/Basic Elements/v1/FPGA/Private/Count Up U64.vi"/>
+				<Item Name="Count Up.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/Basic Elements/v1/FPGA/Public/Count Up.vi"/>
+				<Item Name="Create Resources.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/niUSRP/Reference FPGA/SubVIs/Create Resources.vi"/>
+				<Item Name="Detect Rising Edge.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/Basic Elements/v1/FPGA/Public/Detect Rising Edge.vi"/>
+				<Item Name="IQ Data.ctl" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/DSP/v1/Shared/Public/IQ Data.ctl"/>
+				<Item Name="IQ Gain.ctl" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/DSP/v1/Shared/Public/IQ Gain.ctl"/>
+				<Item Name="IQ Impairments.ctl" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/DSP/v1/Shared/Public/IQ Impairments.ctl"/>
+				<Item Name="LEDs.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/niUSRP/Reference FPGA/SubVIs/LEDs.vi"/>
+				<Item Name="mode_type.ctl" Type="VI" URL="../pulse_tx_vis/mode_type.ctl"/>
+				<Item Name="Process.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/Register Bus/v1/FPGA/Public/Process.vi"/>
+				<Item Name="Process.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/niUsrpRio/Config/v1/FPGA/Public/Process.vi"/>
+				<Item Name="Read Cmd Data.ctl" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/Register Bus/v1/FPGA/Public/Read Cmd Data.ctl"/>
+				<Item Name="Registers.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/niUSRP/Reference FPGA/SubVIs/Registers.vi"/>
+				<Item Name="set num to enum.vi" Type="VI" URL="../fpga/vis/set num to enum.vi"/>
+				<Item Name="Synchronous Latch.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/Basic Elements/v1/FPGA/Public/Synchronous Latch.vi"/>
 			</Item>
 			<Item Name="Build Specifications" Type="Build">
 				<Item Name="pulse_Tx_one_channel" Type="{F4C5E96F-7410-48A5-BB87-3559BC9B167F}">
@@ -7950,7 +7975,7 @@ The converters are capable of running at 6.4 GS/s though a single channel. The i
 			<Property Name="NI.LV.FPGA.CompileConfigString" Type="Str">PXIe-5785 (KU060)/PllClk80/falsefalseFLEXRIO_IO_MODELNI_5785FPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSPXIE_5785__KU060_FPGA_TARGET_FAMILYKINTEXUTARGET_TYPEFPGA</Property>
 			<Property Name="NI.LV.FPGA.Version" Type="Int">6</Property>
 			<Property Name="NI.SortType" Type="Int">3</Property>
-			<Property Name="niFpga_TopLevelVIID" Type="Path">/C/Users/PXIe8108_Demo/Documents/CHAIM DATA/chaim/5785_sync_for_elbit/tx_pulse/EMEA_ADG_EW_secnario_TX_PDW_to_pulses/pulse_tx_vis/test_11.vi</Property>
+			<Property Name="niFpga_TopLevelVIID" Type="Path">/C/Users/PXIe8108_Demo/Documents/CHAIM DATA/chaim/5785_sync_for_elbit/tx_pulse/pulse Tx Folder_lv_21/EMEA_ADG_EW_secnario_TX_PDW_to_pulses/fpga/5785_p2p_IQ_gen.vi</Property>
 			<Property Name="Resource Name" Type="Str"></Property>
 			<Property Name="Target Class" Type="Str">PXIe-5785 (KU060)</Property>
 			<Property Name="Top-Level Timing Source" Type="Str">80 MHz Clock</Property>
@@ -35003,6 +35028,1914 @@ DRAM ClockResourceName=DRAM Clock;TopSignalConnect=DramClkLvFpga;ClockSignalName
 &lt;/Array&gt;
 P2P_IQ_to_VST"ControlLogic=0;NumberOfElements=8191;Type=4;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Never Arbitrate;ElementsPerWrite=32;Implementation=2;P2P_IQ_to_VST;DataType=100080000000000100094002000349313600010000000000000000;DisableOnOverflowUnderflow=FALSE"PXIe_Clk100ResourceName=PXIe_Clk100;TopSignalConnect=PxieClk100;ClockSignalName=PxieClk100;MinFreq=100000000.000000;MaxFreq=100000000.000000;VariableFreq=0;NomFreq=100000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;PXIe_CLK200Multiplier=2.000000;Divisor=1.000000PXIe-5785 (KU060)/PllClk80/falsefalseFLEXRIO_IO_MODELNI_5785FPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSPXIE_5785__KU060_FPGA_TARGET_FAMILYKINTEXUTARGET_TYPEFPGA</Property>
 				</Item>
+				<Item Name="IQ 2 I16.vi" Type="VI" URL="../fpga/IQ 2 I16.vi">
+					<Property Name="configString.guid" Type="Str">{02C952DB-F7EE-41E6-8AE6-5664FFB22970}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-13;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{0A0F21BD-F51D-40BF-BAA3-4C305B2BE12B}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-5;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{15A4B54B-2F45-4778-B229-1EB6367D27D8}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-12;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{1B59697E-3BA1-42F0-B616-1DF5D3E3626E}Multiplier=2.000000;Divisor=1.000000{1B6CF133-D60C-44C5-BB1D-3E75D842BF28}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 1;0;ReadMethodType=bool;WriteMethodType=bool{1C70EE2B-6EE5-468C-A468-6670B8E3C4AE}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-6;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{1E369516-0402-4369-AC78-B7938C7A4210}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 4;0;ReadMethodType=bool;WriteMethodType=bool{1F8A56DC-D38E-4D9B-8BDA-22915C8D3C0B}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-4;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{207D65CB-F503-41C7-B9A9-26BA45CF4C32}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-11;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{220B87F6-24AF-4787-855D-01FE9BB2B38E}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-4;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{227D6344-FEC7-463F-8230-71589B71DC64}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-14;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{27AC275B-CBA6-4D54-BC2C-7718A5C8F828}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-7;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{2D1DDB16-3764-4F96-971B-06FB1176E941}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/IO Ready;0;ReadMethodType=bool{2D4BAFE6-79FF-4474-B321-F4052302D784}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-4;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{317212B9-7FBA-4707-852E-ABCC5D6876CE}ResourceName=PXIe_Clk100;TopSignalConnect=PxieClk100;ClockSignalName=PxieClk100;MinFreq=100000000.000000;MaxFreq=100000000.000000;VariableFreq=0;NomFreq=100000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;{33BE3F0A-A26A-45DC-8270-D2BFB3EC0195}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-9;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{3682563B-3F82-4F22-8329-5614B999B235}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-8;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{370F665D-BF24-4677-8827-C55C578353AF}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-12;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{3983B3C2-9B21-4923-9B9F-299ADCB50F01}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-14;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{400B151A-0B4C-4FC4-8595-EE0F903773ED}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-7;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{43AC8586-086F-46F5-B0F4-4F37451D6672}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-9;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{46BCD66D-CA17-4581-98FA-7A2C0D12511A}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-5;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{47AE8994-243E-47A1-85BB-1E6A4C18EB72}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-4;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{4A1324CE-5F4B-4A9A-959A-E1A5FF41919F}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{52D3A647-8A00-466D-88E9-1BEB1042DCAF}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-2;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{53563A71-E04E-4654-BA36-5747B99F7466}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-14;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{55078417-C3AE-4017-A5EA-52580A364DD8}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-8;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{55955137-ACE9-4F8A-BBAF-85787F9DF5B7}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 5;0;ReadMethodType=bool;WriteMethodType=bool{597BB5F2-C9EB-4727-8DFC-DBE6519D9123}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-1;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{59963E60-EC63-46E0-B098-D56ADAFE937C}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-7;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{5A6EC0B2-960F-4158-92F6-8A8A8394D7A8}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-1;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{5C34DF1D-94A0-438F-86E8-BA16F91CA9AF}ResourceName=IO SocketA_AData Clock;TopSignalConnect=IO_SocketA_ADataClkToLV;ClockSignalName=IO_SocketA_ADataClkToLV;MinFreq=125000000.000000;MaxFreq=200000000.000000;VariableFreq=1;NomFreq=200000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=45.000000;MaxDutyCycle=55.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;{5E040097-C82A-428B-8C7D-E915707E8D46}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-12;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{67F320F8-FDD7-4AAA-9620-52E47FB19701}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-14;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{6E1EE3ED-3943-4942-A968-7770ED81113F}"ControlLogic=0;NumberOfElements=1047;Type=1;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=4;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;instraction fifo;DataType=100080000000000100094008000355363400010000000000000000000000000000;DisableOnOverflowUnderflow=FALSE"{6FA54864-E665-41F6-881B-0216158FDA24}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-3;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{70AEEFC9-52AD-4C81-880F-DAC9F5079538}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-10;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{74CDB928-F95C-4636-92DD-0102892E398C}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-9;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{78B37369-3FC6-4B3F-A93B-A7144BA4C759}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-3;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{82B9AC60-7E91-477A-B692-B86F5598E915}Multiplier=128.000000;Divisor=51.000000{84B31087-0169-4954-A369-561AA93FAD92}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-12;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{877E44BC-0895-4B53-B5FB-DBECCE74B9C6}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-6;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{884908FB-4039-4663-A255-6EBDC56FE146}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-10;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{8B95C2AB-1EEC-427E-A898-98E09A72F225}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 6;0;ReadMethodType=bool;WriteMethodType=bool{8CB3B8B8-C650-4FDE-968C-E6230BA640DD}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-1;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{90AF4F9A-D3A7-48AE-89E3-7D96E54E1F95}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-2;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{92BAABC5-BD3F-424D-B56E-D29D49A56EC8}3119caa9fb9c07750e2167f77fb302623ff9771e20eeda9937fd0aab8b02357fb3949e188fb7f9ea6bf474defa6ea1fde431b6cba9e372579bb96db7e798fc97&lt;Array&gt;
+&lt;Name&gt;Generics&lt;/Name&gt;
+&lt;Dimsize&gt;0&lt;/Dimsize&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Generic&lt;/Name&gt;
+&lt;NumElts&gt;5&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Type&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Default value&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Value&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Description&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;/Array&gt;
+&lt;Array&gt;
+&lt;Name&gt;Clock Connections&lt;/Name&gt;
+&lt;Dimsize&gt;2&lt;/Dimsize&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
+&lt;NumElts&gt;2&lt;/NumElts&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock&lt;/Name&gt;
+&lt;NumElts&gt;6&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;LabVIEW name&lt;/Name&gt;
+&lt;Val&gt;DataClk&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;VHDL name&lt;/Name&gt;
+&lt;Val&gt;DataClk&lt;/Val&gt;
+&lt;/String&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Max Freq&lt;/Name&gt;
+&lt;Val&gt;500000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Min Freq&lt;/Name&gt;
+&lt;Val&gt;1000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;EW&gt;
+&lt;Name&gt;Direction&lt;/Name&gt;
+&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
+&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
+&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/EW&gt;
+&lt;String&gt;
+&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;FPGA Clock&lt;/Name&gt;
+&lt;NumElts&gt;3&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;IO Socket\Data Clock&lt;/Val&gt;
+&lt;/String&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Use Top Clock&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;/Cluster&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
+&lt;NumElts&gt;2&lt;/NumElts&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock&lt;/Name&gt;
+&lt;NumElts&gt;6&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;LabVIEW name&lt;/Name&gt;
+&lt;Val&gt;SyncPulseClk&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;VHDL name&lt;/Name&gt;
+&lt;Val&gt;SyncPulseClk&lt;/Val&gt;
+&lt;/String&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Max Freq&lt;/Name&gt;
+&lt;Val&gt;100000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Min Freq&lt;/Name&gt;
+&lt;Val&gt;100000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;EW&gt;
+&lt;Name&gt;Direction&lt;/Name&gt;
+&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
+&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
+&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/EW&gt;
+&lt;String&gt;
+&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
+&lt;Val&gt;PXIe_Clk100&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;FPGA Clock&lt;/Name&gt;
+&lt;NumElts&gt;3&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;PXIe_Clk100&lt;/Val&gt;
+&lt;/String&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Use Top Clock&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;/Cluster&gt;
+&lt;/Cluster&gt;
+&lt;/Array&gt;
+{93DB61E4-3563-4869-BCE7-B57D18E1358F}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 0;0;ReadMethodType=bool;WriteMethodType=bool{9784E92E-B1CE-47AB-BDEF-7DB20C020574}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-5;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{988A6477-D69C-4FDE-B2EF-44297F836A8B}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-6;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{A2BD4479-F6AB-46CD-B195-7CB777D3ED8E}01b3ed840706364921c5e08e590e69216da7abb93e39619079d4aaf44a252a2b794a31056845501c90b135cc2ffd75ebd9128e1ec7b2a1c7ec414fe6904bfd4d&lt;Array&gt;
+&lt;Name&gt;Generics&lt;/Name&gt;
+&lt;Dimsize&gt;0&lt;/Dimsize&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Generic&lt;/Name&gt;
+&lt;NumElts&gt;5&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Type&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Default value&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Value&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Description&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;/Array&gt;
+&lt;Array&gt;
+&lt;Name&gt;Clock Connections&lt;/Name&gt;
+&lt;Dimsize&gt;3&lt;/Dimsize&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
+&lt;NumElts&gt;2&lt;/NumElts&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock&lt;/Name&gt;
+&lt;NumElts&gt;6&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;LabVIEW name&lt;/Name&gt;
+&lt;Val&gt;Data Clock&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;VHDL name&lt;/Name&gt;
+&lt;Val&gt;DataClkToLV&lt;/Val&gt;
+&lt;/String&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Max Freq&lt;/Name&gt;
+&lt;Val&gt;200000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Min Freq&lt;/Name&gt;
+&lt;Val&gt;125000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;EW&gt;
+&lt;Name&gt;Direction&lt;/Name&gt;
+&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
+&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
+&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
+&lt;Val&gt;1&lt;/Val&gt;
+&lt;/EW&gt;
+&lt;String&gt;
+&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;FPGA Clock&lt;/Name&gt;
+&lt;NumElts&gt;3&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Use Top Clock&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
+&lt;Val&gt;1&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;/Cluster&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
+&lt;NumElts&gt;2&lt;/NumElts&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock&lt;/Name&gt;
+&lt;NumElts&gt;6&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;LabVIEW name&lt;/Name&gt;
+&lt;Val&gt;Data Clock 2x&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;VHDL name&lt;/Name&gt;
+&lt;Val&gt;DataClk2xToLv&lt;/Val&gt;
+&lt;/String&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Max Freq&lt;/Name&gt;
+&lt;Val&gt;400000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Min Freq&lt;/Name&gt;
+&lt;Val&gt;250000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;EW&gt;
+&lt;Name&gt;Direction&lt;/Name&gt;
+&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
+&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
+&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
+&lt;Val&gt;1&lt;/Val&gt;
+&lt;/EW&gt;
+&lt;String&gt;
+&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;FPGA Clock&lt;/Name&gt;
+&lt;NumElts&gt;3&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Use Top Clock&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
+&lt;Val&gt;1&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;/Cluster&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
+&lt;NumElts&gt;2&lt;/NumElts&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock&lt;/Name&gt;
+&lt;NumElts&gt;6&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;LabVIEW name&lt;/Name&gt;
+&lt;Val&gt;Top Level Clock To Clip&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;VHDL name&lt;/Name&gt;
+&lt;Val&gt;TopLevelClk80&lt;/Val&gt;
+&lt;/String&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Max Freq&lt;/Name&gt;
+&lt;Val&gt;80000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Min Freq&lt;/Name&gt;
+&lt;Val&gt;80000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;EW&gt;
+&lt;Name&gt;Direction&lt;/Name&gt;
+&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
+&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
+&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/EW&gt;
+&lt;String&gt;
+&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
+&lt;Val&gt;80 MHz Clock&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;FPGA Clock&lt;/Name&gt;
+&lt;NumElts&gt;3&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;80 MHz Clock&lt;/Val&gt;
+&lt;/String&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Use Top Clock&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;/Cluster&gt;
+&lt;/Cluster&gt;
+&lt;/Array&gt;
+{AAAB97EA-0C6B-4E14-B121-95CB38C8B8F1}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-15;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{AB7AB40F-D12A-4DF7-B8ED-E0A0ADC78204}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-15;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{ABA4914A-FD22-4D0D-BE6C-44DEFE4AA3B7}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 3;0;ReadMethodType=bool;WriteMethodType=bool{ABB5BAEE-253D-4FE6-AB9A-58CEC30EE64F}ResourceName=80 MHz Clock;TopSignalConnect=PllClk80;ClockSignalName=PllClk80;MinFreq=80000000.000000;MaxFreq=80000000.000000;VariableFreq=0;NomFreq=80000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;{AC3A9EDF-3759-4394-AEE2-2570843AD27D}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-13;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{AEEEB57E-0291-4205-9B84-AE8BD5B4E54E}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{B4FAA80E-A14B-4BB5-962B-F0E928E0CD4F}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-11;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{B7FE049C-478F-4D1A-BA55-CCCBC796C015}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-9;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{B98C197B-92C5-45F0-BEFE-D7F23738873B}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-1;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{C0A64626-CF48-4DCE-8D39-372FFDDB6A62}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-10;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{C1519736-D690-471F-9834-F42CD001FB1A}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-3;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{C4A2B5CA-8F72-460C-9BF6-F73828C6169C}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-11;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{C6D282A9-3051-4CB0-B771-94010C27853A}"ControlLogic=0;NumberOfElements=8191;Type=4;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Never Arbitrate;ElementsPerWrite=32;Implementation=2;P2P_IQ_to_VST;DataType=100080000000000100094002000349313600010000000000000000;DisableOnOverflowUnderflow=FALSE"{CD91BBD8-D578-4D7B-A264-A8C0E9DC61E2}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-10;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{CF37013A-DB77-4937-913B-477C5B40A035}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-3;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{D0A9983F-F98B-45A0-81F9-3D1E795B931C}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 7;0;ReadMethodType=bool;WriteMethodType=bool{D291AE32-77B8-4E57-971E-A3B31EC5E7E6}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-2;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{D4A90450-312D-4526-8CF7-4A84969AAB4D}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI Data Valid;0;ReadMethodType=bool{D54C6A42-6844-4183-9AE2-B8084D8ECAF9}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{D7795851-4BFB-429E-A4DD-AE86FAC078CB}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-6;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{D7B79B59-657B-4D67-AB8E-D1DFE79F5DB8}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{DE95C017-ACDB-4464-B2F0-907E0A09F2DE}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AO Ready For Input;0;ReadMethodType=bool{DF0B7A85-63A9-4CB3-A569-E928966505BD}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-15;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{DF52BAD1-70AB-4124-9AA6-991C091E9CF9}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-2;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{E1E22407-5BFF-4C09-818A-FC5ADDD08EDF}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-8;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{E335E1EE-1631-4E4B-AE36-F4777E2C158B}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-13;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{EADD8E8E-51A5-4D68-A2E0-90B0EDB3A644}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-8;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{ED504150-C78E-4897-A5E0-179D4879B6DF}ResourceName=IO SocketA_AData Clock 2x;TopSignalConnect=IO_SocketA_ADataClk2xToLv;ClockSignalName=IO_SocketA_ADataClk2xToLv;MinFreq=250000000.000000;MaxFreq=400000000.000000;VariableFreq=1;NomFreq=400000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=45.000000;MaxDutyCycle=55.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;{EDABE815-9848-4447-B095-541AB7DC0495}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-11;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{F812BB23-E411-4C69-B634-A1EEF13B12CD}"ControlLogic=0;NumberOfElements=1047;Type=1;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=4;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;instraction fifo;DataType=100080000000000100094008000355363400010000000000000000000000000000;DisableOnOverflowUnderflow=FALSE"{F9193B90-8720-452C-9B3A-55855C34F4DD}ResourceName=DRAM Clock;TopSignalConnect=DramClkLvFpga;ClockSignalName=DramClkLvFpga;MinFreq=267000000.000000;MaxFreq=267000000.000000;VariableFreq=0;NomFreq=267000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;{F9B7828D-E86B-4192-9DB4-5CBA5BF135B4}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-5;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{F9D92373-6EC1-4F8E-A326-3B5D3BFB18B3}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 2;0;ReadMethodType=bool;WriteMethodType=bool{FB87F6E6-0CED-4110-B9F8-E8887EF5506C}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-7;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{FD5D2C51-3668-4D06-9D18-3C27381413BA}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-15;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{FE7DA920-4DD7-4C89-975A-ADAB16C889F0}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/IO Error;0;ReadMethodType=I32{FEDC7C5C-571F-49B9-AC2D-FEB676E83430}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-13;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;{FF19C513-2853-4ABB-AC3C-5A289F739797}9adb9f7e2e15cf68aeff140170d23152IOModuleID:0x109379A4,Version:18.7.0,National Instruments::NI 5785,SyncClock:CLK10&lt;Array&gt;
+&lt;Name&gt;Generics&lt;/Name&gt;
+&lt;Dimsize&gt;0&lt;/Dimsize&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Generic&lt;/Name&gt;
+&lt;NumElts&gt;5&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Type&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Default value&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Value&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Description&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;/Array&gt;
+&lt;Array&gt;
+&lt;Name&gt;Clock Connections&lt;/Name&gt;
+&lt;Dimsize&gt;3&lt;/Dimsize&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
+&lt;NumElts&gt;2&lt;/NumElts&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock&lt;/Name&gt;
+&lt;NumElts&gt;6&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;LabVIEW name&lt;/Name&gt;
+&lt;Val&gt;Data Clock&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;VHDL name&lt;/Name&gt;
+&lt;Val&gt;DataClkToLV&lt;/Val&gt;
+&lt;/String&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Max Freq&lt;/Name&gt;
+&lt;Val&gt;200000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Min Freq&lt;/Name&gt;
+&lt;Val&gt;125000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;EW&gt;
+&lt;Name&gt;Direction&lt;/Name&gt;
+&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
+&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
+&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
+&lt;Val&gt;1&lt;/Val&gt;
+&lt;/EW&gt;
+&lt;String&gt;
+&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;FPGA Clock&lt;/Name&gt;
+&lt;NumElts&gt;3&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Use Top Clock&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
+&lt;Val&gt;1&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;/Cluster&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
+&lt;NumElts&gt;2&lt;/NumElts&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock&lt;/Name&gt;
+&lt;NumElts&gt;6&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;LabVIEW name&lt;/Name&gt;
+&lt;Val&gt;Data Clock 2x&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;VHDL name&lt;/Name&gt;
+&lt;Val&gt;DataClk2xToLv&lt;/Val&gt;
+&lt;/String&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Max Freq&lt;/Name&gt;
+&lt;Val&gt;400000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Min Freq&lt;/Name&gt;
+&lt;Val&gt;250000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;EW&gt;
+&lt;Name&gt;Direction&lt;/Name&gt;
+&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
+&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
+&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
+&lt;Val&gt;1&lt;/Val&gt;
+&lt;/EW&gt;
+&lt;String&gt;
+&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;FPGA Clock&lt;/Name&gt;
+&lt;NumElts&gt;3&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Use Top Clock&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
+&lt;Val&gt;1&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;/Cluster&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
+&lt;NumElts&gt;2&lt;/NumElts&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock&lt;/Name&gt;
+&lt;NumElts&gt;6&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;LabVIEW name&lt;/Name&gt;
+&lt;Val&gt;Top Level Clock To Clip&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;VHDL name&lt;/Name&gt;
+&lt;Val&gt;TopLevelClk80&lt;/Val&gt;
+&lt;/String&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Max Freq&lt;/Name&gt;
+&lt;Val&gt;80000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Min Freq&lt;/Name&gt;
+&lt;Val&gt;80000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;EW&gt;
+&lt;Name&gt;Direction&lt;/Name&gt;
+&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
+&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
+&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/EW&gt;
+&lt;String&gt;
+&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
+&lt;Val&gt;80 MHz Clock&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;FPGA Clock&lt;/Name&gt;
+&lt;NumElts&gt;3&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;80 MHz Clock&lt;/Val&gt;
+&lt;/String&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Use Top Clock&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;/Cluster&gt;
+&lt;/Cluster&gt;
+&lt;/Array&gt;
+PXIe-5785 (KU060)/PllClk80/falsefalseFLEXRIO_IO_MODELNI_5785FPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSPXIE_5785__KU060_FPGA_TARGET_FAMILYKINTEXUTARGET_TYPEFPGA</Property>
+					<Property Name="configString.name" Type="Str">200.78MHzMultiplier=128.000000;Divisor=51.00000080 MHz ClockResourceName=80 MHz Clock;TopSignalConnect=PllClk80;ClockSignalName=PllClk80;MinFreq=80000000.000000;MaxFreq=80000000.000000;VariableFreq=0;NomFreq=80000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;AI 0 Data N-10NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-10;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 0 Data N-11NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-11;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 0 Data N-12NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-12;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 0 Data N-13NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-13;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 0 Data N-14NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-14;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 0 Data N-15NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-15;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 0 Data N-1NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-1;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 0 Data N-2NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-2;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 0 Data N-3NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-3;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 0 Data N-4NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-4;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 0 Data N-5NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-5;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 0 Data N-6NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-6;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 0 Data N-7NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-7;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 0 Data N-8NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-8;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 0 Data N-9NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-9;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 0 Data NNumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 1 Data N-10NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-10;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 1 Data N-11NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-11;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 1 Data N-12NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-12;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 1 Data N-13NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-13;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 1 Data N-14NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-14;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 1 Data N-15NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-15;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 1 Data N-1NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-1;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 1 Data N-2NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-2;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 1 Data N-3NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-3;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 1 Data N-4NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-4;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 1 Data N-5NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-5;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 1 Data N-6NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-6;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 1 Data N-7NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-7;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 1 Data N-8NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-8;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 1 Data N-9NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-9;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI 1 Data NNumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N;0;ReadMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AI Data ValidNumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI Data Valid;0;ReadMethodType=boolAO 0 Data N-10ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-10;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 0 Data N-11ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-11;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 0 Data N-12ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-12;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 0 Data N-13ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-13;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 0 Data N-14ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-14;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 0 Data N-15ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-15;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 0 Data N-1ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-1;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 0 Data N-2ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-2;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 0 Data N-3ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-3;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 0 Data N-4ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-4;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 0 Data N-5ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-5;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 0 Data N-6ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-6;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 0 Data N-7ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-7;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 0 Data N-8ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-8;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 0 Data N-9ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-9;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 0 Data NArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 1 Data N-10ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-10;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 1 Data N-11ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-11;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 1 Data N-12ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-12;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 1 Data N-13ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-13;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 1 Data N-14ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-14;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 1 Data N-15ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-15;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 1 Data N-1ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-1;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 1 Data N-2ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-2;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 1 Data N-3ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-3;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 1 Data N-4ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-4;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 1 Data N-5ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-5;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 1 Data N-6ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-6;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 1 Data N-7ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-7;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 1 Data N-8ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-8;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 1 Data N-9ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-9;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO 1 Data NArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N;0;WriteMethodType=
+&lt;Type&gt;
+   &lt;FXP&gt;
+      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
+      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
+      &lt;WordLength&gt;12&lt;/WordLength&gt;
+   &lt;/FXP&gt;
+&lt;/Type&gt;AO Ready For InputNumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AO Ready For Input;0;ReadMethodType=boolData Clock 2xResourceName=IO SocketA_AData Clock 2x;TopSignalConnect=IO_SocketA_ADataClk2xToLv;ClockSignalName=IO_SocketA_ADataClk2xToLv;MinFreq=250000000.000000;MaxFreq=400000000.000000;VariableFreq=1;NomFreq=400000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=45.000000;MaxDutyCycle=55.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;Data ClockResourceName=IO SocketA_AData Clock;TopSignalConnect=IO_SocketA_ADataClkToLV;ClockSignalName=IO_SocketA_ADataClkToLV;MinFreq=125000000.000000;MaxFreq=200000000.000000;VariableFreq=1;NomFreq=200000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=45.000000;MaxDutyCycle=55.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;DIO 0ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 0;0;ReadMethodType=bool;WriteMethodType=boolDIO 1ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 1;0;ReadMethodType=bool;WriteMethodType=boolDIO 2ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 2;0;ReadMethodType=bool;WriteMethodType=boolDIO 3ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 3;0;ReadMethodType=bool;WriteMethodType=boolDIO 4ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 4;0;ReadMethodType=bool;WriteMethodType=boolDIO 5ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 5;0;ReadMethodType=bool;WriteMethodType=boolDIO 6ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 6;0;ReadMethodType=bool;WriteMethodType=boolDIO 7ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 7;0;ReadMethodType=bool;WriteMethodType=boolDIO Voltage Selection01b3ed840706364921c5e08e590e69216da7abb93e39619079d4aaf44a252a2b794a31056845501c90b135cc2ffd75ebd9128e1ec7b2a1c7ec414fe6904bfd4d&lt;Array&gt;
+&lt;Name&gt;Generics&lt;/Name&gt;
+&lt;Dimsize&gt;0&lt;/Dimsize&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Generic&lt;/Name&gt;
+&lt;NumElts&gt;5&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Type&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Default value&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Value&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Description&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;/Array&gt;
+&lt;Array&gt;
+&lt;Name&gt;Clock Connections&lt;/Name&gt;
+&lt;Dimsize&gt;3&lt;/Dimsize&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
+&lt;NumElts&gt;2&lt;/NumElts&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock&lt;/Name&gt;
+&lt;NumElts&gt;6&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;LabVIEW name&lt;/Name&gt;
+&lt;Val&gt;Data Clock&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;VHDL name&lt;/Name&gt;
+&lt;Val&gt;DataClkToLV&lt;/Val&gt;
+&lt;/String&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Max Freq&lt;/Name&gt;
+&lt;Val&gt;200000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Min Freq&lt;/Name&gt;
+&lt;Val&gt;125000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;EW&gt;
+&lt;Name&gt;Direction&lt;/Name&gt;
+&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
+&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
+&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
+&lt;Val&gt;1&lt;/Val&gt;
+&lt;/EW&gt;
+&lt;String&gt;
+&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;FPGA Clock&lt;/Name&gt;
+&lt;NumElts&gt;3&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Use Top Clock&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
+&lt;Val&gt;1&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;/Cluster&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
+&lt;NumElts&gt;2&lt;/NumElts&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock&lt;/Name&gt;
+&lt;NumElts&gt;6&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;LabVIEW name&lt;/Name&gt;
+&lt;Val&gt;Data Clock 2x&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;VHDL name&lt;/Name&gt;
+&lt;Val&gt;DataClk2xToLv&lt;/Val&gt;
+&lt;/String&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Max Freq&lt;/Name&gt;
+&lt;Val&gt;400000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Min Freq&lt;/Name&gt;
+&lt;Val&gt;250000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;EW&gt;
+&lt;Name&gt;Direction&lt;/Name&gt;
+&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
+&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
+&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
+&lt;Val&gt;1&lt;/Val&gt;
+&lt;/EW&gt;
+&lt;String&gt;
+&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;FPGA Clock&lt;/Name&gt;
+&lt;NumElts&gt;3&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Use Top Clock&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
+&lt;Val&gt;1&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;/Cluster&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
+&lt;NumElts&gt;2&lt;/NumElts&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock&lt;/Name&gt;
+&lt;NumElts&gt;6&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;LabVIEW name&lt;/Name&gt;
+&lt;Val&gt;Top Level Clock To Clip&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;VHDL name&lt;/Name&gt;
+&lt;Val&gt;TopLevelClk80&lt;/Val&gt;
+&lt;/String&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Max Freq&lt;/Name&gt;
+&lt;Val&gt;80000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Min Freq&lt;/Name&gt;
+&lt;Val&gt;80000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;EW&gt;
+&lt;Name&gt;Direction&lt;/Name&gt;
+&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
+&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
+&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/EW&gt;
+&lt;String&gt;
+&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
+&lt;Val&gt;80 MHz Clock&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;FPGA Clock&lt;/Name&gt;
+&lt;NumElts&gt;3&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;80 MHz Clock&lt;/Val&gt;
+&lt;/String&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Use Top Clock&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;/Cluster&gt;
+&lt;/Cluster&gt;
+&lt;/Array&gt;
+DRAM Bank 03119caa9fb9c07750e2167f77fb302623ff9771e20eeda9937fd0aab8b02357fb3949e188fb7f9ea6bf474defa6ea1fde431b6cba9e372579bb96db7e798fc97&lt;Array&gt;
+&lt;Name&gt;Generics&lt;/Name&gt;
+&lt;Dimsize&gt;0&lt;/Dimsize&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Generic&lt;/Name&gt;
+&lt;NumElts&gt;5&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Type&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Default value&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Value&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Description&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;/Array&gt;
+&lt;Array&gt;
+&lt;Name&gt;Clock Connections&lt;/Name&gt;
+&lt;Dimsize&gt;2&lt;/Dimsize&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
+&lt;NumElts&gt;2&lt;/NumElts&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock&lt;/Name&gt;
+&lt;NumElts&gt;6&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;LabVIEW name&lt;/Name&gt;
+&lt;Val&gt;DataClk&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;VHDL name&lt;/Name&gt;
+&lt;Val&gt;DataClk&lt;/Val&gt;
+&lt;/String&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Max Freq&lt;/Name&gt;
+&lt;Val&gt;500000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Min Freq&lt;/Name&gt;
+&lt;Val&gt;1000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;EW&gt;
+&lt;Name&gt;Direction&lt;/Name&gt;
+&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
+&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
+&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/EW&gt;
+&lt;String&gt;
+&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;FPGA Clock&lt;/Name&gt;
+&lt;NumElts&gt;3&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;IO Socket\Data Clock&lt;/Val&gt;
+&lt;/String&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Use Top Clock&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;/Cluster&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
+&lt;NumElts&gt;2&lt;/NumElts&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock&lt;/Name&gt;
+&lt;NumElts&gt;6&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;LabVIEW name&lt;/Name&gt;
+&lt;Val&gt;SyncPulseClk&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;VHDL name&lt;/Name&gt;
+&lt;Val&gt;SyncPulseClk&lt;/Val&gt;
+&lt;/String&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Max Freq&lt;/Name&gt;
+&lt;Val&gt;100000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Min Freq&lt;/Name&gt;
+&lt;Val&gt;100000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;EW&gt;
+&lt;Name&gt;Direction&lt;/Name&gt;
+&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
+&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
+&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/EW&gt;
+&lt;String&gt;
+&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
+&lt;Val&gt;PXIe_Clk100&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;FPGA Clock&lt;/Name&gt;
+&lt;NumElts&gt;3&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;PXIe_Clk100&lt;/Val&gt;
+&lt;/String&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Use Top Clock&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;/Cluster&gt;
+&lt;/Cluster&gt;
+&lt;/Array&gt;
+DRAM ClockResourceName=DRAM Clock;TopSignalConnect=DramClkLvFpga;ClockSignalName=DramClkLvFpga;MinFreq=267000000.000000;MaxFreq=267000000.000000;VariableFreq=0;NomFreq=267000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;instraction fifo 2"ControlLogic=0;NumberOfElements=1047;Type=1;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=4;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;instraction fifo;DataType=100080000000000100094008000355363400010000000000000000000000000000;DisableOnOverflowUnderflow=FALSE"instraction fifo"ControlLogic=0;NumberOfElements=1047;Type=1;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=4;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;instraction fifo;DataType=100080000000000100094008000355363400010000000000000000000000000000;DisableOnOverflowUnderflow=FALSE"IO ErrorNumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/IO Error;0;ReadMethodType=I32IO ReadyNumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/IO Ready;0;ReadMethodType=boolIO Socket9adb9f7e2e15cf68aeff140170d23152IOModuleID:0x109379A4,Version:18.7.0,National Instruments::NI 5785,SyncClock:CLK10&lt;Array&gt;
+&lt;Name&gt;Generics&lt;/Name&gt;
+&lt;Dimsize&gt;0&lt;/Dimsize&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Generic&lt;/Name&gt;
+&lt;NumElts&gt;5&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Type&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Default value&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Value&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;Description&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;/Array&gt;
+&lt;Array&gt;
+&lt;Name&gt;Clock Connections&lt;/Name&gt;
+&lt;Dimsize&gt;3&lt;/Dimsize&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
+&lt;NumElts&gt;2&lt;/NumElts&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock&lt;/Name&gt;
+&lt;NumElts&gt;6&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;LabVIEW name&lt;/Name&gt;
+&lt;Val&gt;Data Clock&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;VHDL name&lt;/Name&gt;
+&lt;Val&gt;DataClkToLV&lt;/Val&gt;
+&lt;/String&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Max Freq&lt;/Name&gt;
+&lt;Val&gt;200000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Min Freq&lt;/Name&gt;
+&lt;Val&gt;125000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;EW&gt;
+&lt;Name&gt;Direction&lt;/Name&gt;
+&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
+&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
+&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
+&lt;Val&gt;1&lt;/Val&gt;
+&lt;/EW&gt;
+&lt;String&gt;
+&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;FPGA Clock&lt;/Name&gt;
+&lt;NumElts&gt;3&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Use Top Clock&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
+&lt;Val&gt;1&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;/Cluster&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
+&lt;NumElts&gt;2&lt;/NumElts&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock&lt;/Name&gt;
+&lt;NumElts&gt;6&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;LabVIEW name&lt;/Name&gt;
+&lt;Val&gt;Data Clock 2x&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;VHDL name&lt;/Name&gt;
+&lt;Val&gt;DataClk2xToLv&lt;/Val&gt;
+&lt;/String&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Max Freq&lt;/Name&gt;
+&lt;Val&gt;400000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Min Freq&lt;/Name&gt;
+&lt;Val&gt;250000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;EW&gt;
+&lt;Name&gt;Direction&lt;/Name&gt;
+&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
+&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
+&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
+&lt;Val&gt;1&lt;/Val&gt;
+&lt;/EW&gt;
+&lt;String&gt;
+&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;FPGA Clock&lt;/Name&gt;
+&lt;NumElts&gt;3&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;&lt;/Val&gt;
+&lt;/String&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Use Top Clock&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
+&lt;Val&gt;1&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;/Cluster&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
+&lt;NumElts&gt;2&lt;/NumElts&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;CLIP Clock&lt;/Name&gt;
+&lt;NumElts&gt;6&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;LabVIEW name&lt;/Name&gt;
+&lt;Val&gt;Top Level Clock To Clip&lt;/Val&gt;
+&lt;/String&gt;
+&lt;String&gt;
+&lt;Name&gt;VHDL name&lt;/Name&gt;
+&lt;Val&gt;TopLevelClk80&lt;/Val&gt;
+&lt;/String&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Max Freq&lt;/Name&gt;
+&lt;Val&gt;80000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;DBL&gt;
+&lt;Name&gt;Min Freq&lt;/Name&gt;
+&lt;Val&gt;80000000.00000000000000&lt;/Val&gt;
+&lt;/DBL&gt;
+&lt;EW&gt;
+&lt;Name&gt;Direction&lt;/Name&gt;
+&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
+&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
+&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/EW&gt;
+&lt;String&gt;
+&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
+&lt;Val&gt;80 MHz Clock&lt;/Val&gt;
+&lt;/String&gt;
+&lt;/Cluster&gt;
+&lt;Cluster&gt;
+&lt;Name&gt;FPGA Clock&lt;/Name&gt;
+&lt;NumElts&gt;3&lt;/NumElts&gt;
+&lt;String&gt;
+&lt;Name&gt;Name&lt;/Name&gt;
+&lt;Val&gt;80 MHz Clock&lt;/Val&gt;
+&lt;/String&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Use Top Clock&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;Boolean&gt;
+&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
+&lt;Val&gt;0&lt;/Val&gt;
+&lt;/Boolean&gt;
+&lt;/Cluster&gt;
+&lt;/Cluster&gt;
+&lt;/Array&gt;
+P2P_IQ_to_VST"ControlLogic=0;NumberOfElements=8191;Type=4;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Never Arbitrate;ElementsPerWrite=32;Implementation=2;P2P_IQ_to_VST;DataType=100080000000000100094002000349313600010000000000000000;DisableOnOverflowUnderflow=FALSE"PXIe_Clk100ResourceName=PXIe_Clk100;TopSignalConnect=PxieClk100;ClockSignalName=PxieClk100;MinFreq=100000000.000000;MaxFreq=100000000.000000;VariableFreq=0;NomFreq=100000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;PXIe_CLK200Multiplier=2.000000;Divisor=1.000000PXIe-5785 (KU060)/PllClk80/falsefalseFLEXRIO_IO_MODELNI_5785FPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSPXIE_5785__KU060_FPGA_TARGET_FAMILYKINTEXUTARGET_TYPEFPGA</Property>
+				</Item>
 			</Item>
 			<Item Name="subVIs" Type="Folder">
 				<Item Name="Analog Trigger with Interleaving Select.vi" Type="VI" URL="../5785_VIs/Analog Trigger with Interleaving Select.vi">
@@ -48081,1914 +50014,6 @@ P2P_IQ_to_VST"ControlLogic=0;NumberOfElements=8191;Type=4;ReadArbs=Arbitrate if 
 				<Property Name="NI.LV.FPGA.Valid" Type="Bool">true</Property>
 				<Property Name="NI.SortType" Type="Int">3</Property>
 			</Item>
-			<Item Name="IQ 2 I16.vi" Type="VI" URL="../fpga/IQ 2 I16.vi">
-				<Property Name="configString.guid" Type="Str">{02C952DB-F7EE-41E6-8AE6-5664FFB22970}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-13;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{0A0F21BD-F51D-40BF-BAA3-4C305B2BE12B}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-5;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{15A4B54B-2F45-4778-B229-1EB6367D27D8}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-12;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{1B59697E-3BA1-42F0-B616-1DF5D3E3626E}Multiplier=2.000000;Divisor=1.000000{1B6CF133-D60C-44C5-BB1D-3E75D842BF28}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 1;0;ReadMethodType=bool;WriteMethodType=bool{1C70EE2B-6EE5-468C-A468-6670B8E3C4AE}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-6;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{1E369516-0402-4369-AC78-B7938C7A4210}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 4;0;ReadMethodType=bool;WriteMethodType=bool{1F8A56DC-D38E-4D9B-8BDA-22915C8D3C0B}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-4;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{207D65CB-F503-41C7-B9A9-26BA45CF4C32}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-11;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{220B87F6-24AF-4787-855D-01FE9BB2B38E}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-4;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{227D6344-FEC7-463F-8230-71589B71DC64}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-14;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{27AC275B-CBA6-4D54-BC2C-7718A5C8F828}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-7;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{2D1DDB16-3764-4F96-971B-06FB1176E941}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/IO Ready;0;ReadMethodType=bool{2D4BAFE6-79FF-4474-B321-F4052302D784}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-4;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{317212B9-7FBA-4707-852E-ABCC5D6876CE}ResourceName=PXIe_Clk100;TopSignalConnect=PxieClk100;ClockSignalName=PxieClk100;MinFreq=100000000.000000;MaxFreq=100000000.000000;VariableFreq=0;NomFreq=100000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;{33BE3F0A-A26A-45DC-8270-D2BFB3EC0195}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-9;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{3682563B-3F82-4F22-8329-5614B999B235}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-8;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{370F665D-BF24-4677-8827-C55C578353AF}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-12;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{3983B3C2-9B21-4923-9B9F-299ADCB50F01}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-14;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{400B151A-0B4C-4FC4-8595-EE0F903773ED}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-7;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{43AC8586-086F-46F5-B0F4-4F37451D6672}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-9;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{46BCD66D-CA17-4581-98FA-7A2C0D12511A}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-5;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{47AE8994-243E-47A1-85BB-1E6A4C18EB72}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-4;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{4A1324CE-5F4B-4A9A-959A-E1A5FF41919F}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{52D3A647-8A00-466D-88E9-1BEB1042DCAF}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-2;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{53563A71-E04E-4654-BA36-5747B99F7466}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-14;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{55078417-C3AE-4017-A5EA-52580A364DD8}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-8;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{55955137-ACE9-4F8A-BBAF-85787F9DF5B7}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 5;0;ReadMethodType=bool;WriteMethodType=bool{597BB5F2-C9EB-4727-8DFC-DBE6519D9123}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-1;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{59963E60-EC63-46E0-B098-D56ADAFE937C}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-7;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{5A6EC0B2-960F-4158-92F6-8A8A8394D7A8}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-1;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{5C34DF1D-94A0-438F-86E8-BA16F91CA9AF}ResourceName=IO SocketA_AData Clock;TopSignalConnect=IO_SocketA_ADataClkToLV;ClockSignalName=IO_SocketA_ADataClkToLV;MinFreq=125000000.000000;MaxFreq=200000000.000000;VariableFreq=1;NomFreq=200000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=45.000000;MaxDutyCycle=55.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;{5E040097-C82A-428B-8C7D-E915707E8D46}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-12;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{67F320F8-FDD7-4AAA-9620-52E47FB19701}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-14;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{6E1EE3ED-3943-4942-A968-7770ED81113F}"ControlLogic=0;NumberOfElements=1047;Type=1;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=4;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;instraction fifo;DataType=100080000000000100094008000355363400010000000000000000000000000000;DisableOnOverflowUnderflow=FALSE"{6FA54864-E665-41F6-881B-0216158FDA24}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-3;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{70AEEFC9-52AD-4C81-880F-DAC9F5079538}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-10;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{74CDB928-F95C-4636-92DD-0102892E398C}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-9;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{78B37369-3FC6-4B3F-A93B-A7144BA4C759}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-3;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{82B9AC60-7E91-477A-B692-B86F5598E915}Multiplier=128.000000;Divisor=51.000000{84B31087-0169-4954-A369-561AA93FAD92}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-12;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{877E44BC-0895-4B53-B5FB-DBECCE74B9C6}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-6;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{884908FB-4039-4663-A255-6EBDC56FE146}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-10;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{8B95C2AB-1EEC-427E-A898-98E09A72F225}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 6;0;ReadMethodType=bool;WriteMethodType=bool{8CB3B8B8-C650-4FDE-968C-E6230BA640DD}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-1;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{90AF4F9A-D3A7-48AE-89E3-7D96E54E1F95}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-2;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{92BAABC5-BD3F-424D-B56E-D29D49A56EC8}3119caa9fb9c07750e2167f77fb302623ff9771e20eeda9937fd0aab8b02357fb3949e188fb7f9ea6bf474defa6ea1fde431b6cba9e372579bb96db7e798fc97&lt;Array&gt;
-&lt;Name&gt;Generics&lt;/Name&gt;
-&lt;Dimsize&gt;0&lt;/Dimsize&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Generic&lt;/Name&gt;
-&lt;NumElts&gt;5&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Type&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Default value&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Value&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Description&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;/Array&gt;
-&lt;Array&gt;
-&lt;Name&gt;Clock Connections&lt;/Name&gt;
-&lt;Dimsize&gt;2&lt;/Dimsize&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
-&lt;NumElts&gt;2&lt;/NumElts&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock&lt;/Name&gt;
-&lt;NumElts&gt;6&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;LabVIEW name&lt;/Name&gt;
-&lt;Val&gt;DataClk&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;VHDL name&lt;/Name&gt;
-&lt;Val&gt;DataClk&lt;/Val&gt;
-&lt;/String&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Max Freq&lt;/Name&gt;
-&lt;Val&gt;500000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Min Freq&lt;/Name&gt;
-&lt;Val&gt;1000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;EW&gt;
-&lt;Name&gt;Direction&lt;/Name&gt;
-&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
-&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
-&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/EW&gt;
-&lt;String&gt;
-&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;FPGA Clock&lt;/Name&gt;
-&lt;NumElts&gt;3&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;IO Socket\Data Clock&lt;/Val&gt;
-&lt;/String&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Use Top Clock&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;/Cluster&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
-&lt;NumElts&gt;2&lt;/NumElts&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock&lt;/Name&gt;
-&lt;NumElts&gt;6&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;LabVIEW name&lt;/Name&gt;
-&lt;Val&gt;SyncPulseClk&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;VHDL name&lt;/Name&gt;
-&lt;Val&gt;SyncPulseClk&lt;/Val&gt;
-&lt;/String&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Max Freq&lt;/Name&gt;
-&lt;Val&gt;100000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Min Freq&lt;/Name&gt;
-&lt;Val&gt;100000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;EW&gt;
-&lt;Name&gt;Direction&lt;/Name&gt;
-&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
-&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
-&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/EW&gt;
-&lt;String&gt;
-&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
-&lt;Val&gt;PXIe_Clk100&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;FPGA Clock&lt;/Name&gt;
-&lt;NumElts&gt;3&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;PXIe_Clk100&lt;/Val&gt;
-&lt;/String&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Use Top Clock&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;/Cluster&gt;
-&lt;/Cluster&gt;
-&lt;/Array&gt;
-{93DB61E4-3563-4869-BCE7-B57D18E1358F}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 0;0;ReadMethodType=bool;WriteMethodType=bool{9784E92E-B1CE-47AB-BDEF-7DB20C020574}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-5;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{988A6477-D69C-4FDE-B2EF-44297F836A8B}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-6;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{A2BD4479-F6AB-46CD-B195-7CB777D3ED8E}01b3ed840706364921c5e08e590e69216da7abb93e39619079d4aaf44a252a2b794a31056845501c90b135cc2ffd75ebd9128e1ec7b2a1c7ec414fe6904bfd4d&lt;Array&gt;
-&lt;Name&gt;Generics&lt;/Name&gt;
-&lt;Dimsize&gt;0&lt;/Dimsize&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Generic&lt;/Name&gt;
-&lt;NumElts&gt;5&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Type&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Default value&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Value&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Description&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;/Array&gt;
-&lt;Array&gt;
-&lt;Name&gt;Clock Connections&lt;/Name&gt;
-&lt;Dimsize&gt;3&lt;/Dimsize&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
-&lt;NumElts&gt;2&lt;/NumElts&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock&lt;/Name&gt;
-&lt;NumElts&gt;6&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;LabVIEW name&lt;/Name&gt;
-&lt;Val&gt;Data Clock&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;VHDL name&lt;/Name&gt;
-&lt;Val&gt;DataClkToLV&lt;/Val&gt;
-&lt;/String&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Max Freq&lt;/Name&gt;
-&lt;Val&gt;200000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Min Freq&lt;/Name&gt;
-&lt;Val&gt;125000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;EW&gt;
-&lt;Name&gt;Direction&lt;/Name&gt;
-&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
-&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
-&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
-&lt;Val&gt;1&lt;/Val&gt;
-&lt;/EW&gt;
-&lt;String&gt;
-&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;FPGA Clock&lt;/Name&gt;
-&lt;NumElts&gt;3&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Use Top Clock&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
-&lt;Val&gt;1&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;/Cluster&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
-&lt;NumElts&gt;2&lt;/NumElts&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock&lt;/Name&gt;
-&lt;NumElts&gt;6&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;LabVIEW name&lt;/Name&gt;
-&lt;Val&gt;Data Clock 2x&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;VHDL name&lt;/Name&gt;
-&lt;Val&gt;DataClk2xToLv&lt;/Val&gt;
-&lt;/String&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Max Freq&lt;/Name&gt;
-&lt;Val&gt;400000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Min Freq&lt;/Name&gt;
-&lt;Val&gt;250000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;EW&gt;
-&lt;Name&gt;Direction&lt;/Name&gt;
-&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
-&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
-&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
-&lt;Val&gt;1&lt;/Val&gt;
-&lt;/EW&gt;
-&lt;String&gt;
-&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;FPGA Clock&lt;/Name&gt;
-&lt;NumElts&gt;3&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Use Top Clock&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
-&lt;Val&gt;1&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;/Cluster&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
-&lt;NumElts&gt;2&lt;/NumElts&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock&lt;/Name&gt;
-&lt;NumElts&gt;6&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;LabVIEW name&lt;/Name&gt;
-&lt;Val&gt;Top Level Clock To Clip&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;VHDL name&lt;/Name&gt;
-&lt;Val&gt;TopLevelClk80&lt;/Val&gt;
-&lt;/String&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Max Freq&lt;/Name&gt;
-&lt;Val&gt;80000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Min Freq&lt;/Name&gt;
-&lt;Val&gt;80000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;EW&gt;
-&lt;Name&gt;Direction&lt;/Name&gt;
-&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
-&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
-&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/EW&gt;
-&lt;String&gt;
-&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
-&lt;Val&gt;80 MHz Clock&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;FPGA Clock&lt;/Name&gt;
-&lt;NumElts&gt;3&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;80 MHz Clock&lt;/Val&gt;
-&lt;/String&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Use Top Clock&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;/Cluster&gt;
-&lt;/Cluster&gt;
-&lt;/Array&gt;
-{AAAB97EA-0C6B-4E14-B121-95CB38C8B8F1}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-15;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{AB7AB40F-D12A-4DF7-B8ED-E0A0ADC78204}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-15;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{ABA4914A-FD22-4D0D-BE6C-44DEFE4AA3B7}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 3;0;ReadMethodType=bool;WriteMethodType=bool{ABB5BAEE-253D-4FE6-AB9A-58CEC30EE64F}ResourceName=80 MHz Clock;TopSignalConnect=PllClk80;ClockSignalName=PllClk80;MinFreq=80000000.000000;MaxFreq=80000000.000000;VariableFreq=0;NomFreq=80000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;{AC3A9EDF-3759-4394-AEE2-2570843AD27D}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-13;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{AEEEB57E-0291-4205-9B84-AE8BD5B4E54E}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{B4FAA80E-A14B-4BB5-962B-F0E928E0CD4F}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-11;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{B7FE049C-478F-4D1A-BA55-CCCBC796C015}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-9;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{B98C197B-92C5-45F0-BEFE-D7F23738873B}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-1;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{C0A64626-CF48-4DCE-8D39-372FFDDB6A62}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-10;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{C1519736-D690-471F-9834-F42CD001FB1A}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-3;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{C4A2B5CA-8F72-460C-9BF6-F73828C6169C}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-11;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{C6D282A9-3051-4CB0-B771-94010C27853A}"ControlLogic=0;NumberOfElements=8191;Type=4;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Never Arbitrate;ElementsPerWrite=32;Implementation=2;P2P_IQ_to_VST;DataType=100080000000000100094002000349313600010000000000000000;DisableOnOverflowUnderflow=FALSE"{CD91BBD8-D578-4D7B-A264-A8C0E9DC61E2}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-10;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{CF37013A-DB77-4937-913B-477C5B40A035}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-3;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{D0A9983F-F98B-45A0-81F9-3D1E795B931C}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 7;0;ReadMethodType=bool;WriteMethodType=bool{D291AE32-77B8-4E57-971E-A3B31EC5E7E6}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-2;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{D4A90450-312D-4526-8CF7-4A84969AAB4D}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI Data Valid;0;ReadMethodType=bool{D54C6A42-6844-4183-9AE2-B8084D8ECAF9}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{D7795851-4BFB-429E-A4DD-AE86FAC078CB}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-6;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{D7B79B59-657B-4D67-AB8E-D1DFE79F5DB8}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{DE95C017-ACDB-4464-B2F0-907E0A09F2DE}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AO Ready For Input;0;ReadMethodType=bool{DF0B7A85-63A9-4CB3-A569-E928966505BD}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-15;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{DF52BAD1-70AB-4124-9AA6-991C091E9CF9}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-2;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{E1E22407-5BFF-4C09-818A-FC5ADDD08EDF}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-8;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{E335E1EE-1631-4E4B-AE36-F4777E2C158B}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-13;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{EADD8E8E-51A5-4D68-A2E0-90B0EDB3A644}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-8;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{ED504150-C78E-4897-A5E0-179D4879B6DF}ResourceName=IO SocketA_AData Clock 2x;TopSignalConnect=IO_SocketA_ADataClk2xToLv;ClockSignalName=IO_SocketA_ADataClk2xToLv;MinFreq=250000000.000000;MaxFreq=400000000.000000;VariableFreq=1;NomFreq=400000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=45.000000;MaxDutyCycle=55.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;{EDABE815-9848-4447-B095-541AB7DC0495}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-11;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{F812BB23-E411-4C69-B634-A1EEF13B12CD}"ControlLogic=0;NumberOfElements=1047;Type=1;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=4;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;instraction fifo;DataType=100080000000000100094008000355363400010000000000000000000000000000;DisableOnOverflowUnderflow=FALSE"{F9193B90-8720-452C-9B3A-55855C34F4DD}ResourceName=DRAM Clock;TopSignalConnect=DramClkLvFpga;ClockSignalName=DramClkLvFpga;MinFreq=267000000.000000;MaxFreq=267000000.000000;VariableFreq=0;NomFreq=267000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;{F9B7828D-E86B-4192-9DB4-5CBA5BF135B4}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-5;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{F9D92373-6EC1-4F8E-A326-3B5D3BFB18B3}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 2;0;ReadMethodType=bool;WriteMethodType=bool{FB87F6E6-0CED-4110-B9F8-E8887EF5506C}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-7;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{FD5D2C51-3668-4D06-9D18-3C27381413BA}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-15;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{FE7DA920-4DD7-4C89-975A-ADAB16C889F0}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/IO Error;0;ReadMethodType=I32{FEDC7C5C-571F-49B9-AC2D-FEB676E83430}NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-13;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;{FF19C513-2853-4ABB-AC3C-5A289F739797}9adb9f7e2e15cf68aeff140170d23152IOModuleID:0x109379A4,Version:18.7.0,National Instruments::NI 5785,SyncClock:CLK10&lt;Array&gt;
-&lt;Name&gt;Generics&lt;/Name&gt;
-&lt;Dimsize&gt;0&lt;/Dimsize&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Generic&lt;/Name&gt;
-&lt;NumElts&gt;5&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Type&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Default value&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Value&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Description&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;/Array&gt;
-&lt;Array&gt;
-&lt;Name&gt;Clock Connections&lt;/Name&gt;
-&lt;Dimsize&gt;3&lt;/Dimsize&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
-&lt;NumElts&gt;2&lt;/NumElts&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock&lt;/Name&gt;
-&lt;NumElts&gt;6&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;LabVIEW name&lt;/Name&gt;
-&lt;Val&gt;Data Clock&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;VHDL name&lt;/Name&gt;
-&lt;Val&gt;DataClkToLV&lt;/Val&gt;
-&lt;/String&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Max Freq&lt;/Name&gt;
-&lt;Val&gt;200000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Min Freq&lt;/Name&gt;
-&lt;Val&gt;125000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;EW&gt;
-&lt;Name&gt;Direction&lt;/Name&gt;
-&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
-&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
-&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
-&lt;Val&gt;1&lt;/Val&gt;
-&lt;/EW&gt;
-&lt;String&gt;
-&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;FPGA Clock&lt;/Name&gt;
-&lt;NumElts&gt;3&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Use Top Clock&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
-&lt;Val&gt;1&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;/Cluster&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
-&lt;NumElts&gt;2&lt;/NumElts&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock&lt;/Name&gt;
-&lt;NumElts&gt;6&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;LabVIEW name&lt;/Name&gt;
-&lt;Val&gt;Data Clock 2x&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;VHDL name&lt;/Name&gt;
-&lt;Val&gt;DataClk2xToLv&lt;/Val&gt;
-&lt;/String&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Max Freq&lt;/Name&gt;
-&lt;Val&gt;400000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Min Freq&lt;/Name&gt;
-&lt;Val&gt;250000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;EW&gt;
-&lt;Name&gt;Direction&lt;/Name&gt;
-&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
-&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
-&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
-&lt;Val&gt;1&lt;/Val&gt;
-&lt;/EW&gt;
-&lt;String&gt;
-&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;FPGA Clock&lt;/Name&gt;
-&lt;NumElts&gt;3&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Use Top Clock&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
-&lt;Val&gt;1&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;/Cluster&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
-&lt;NumElts&gt;2&lt;/NumElts&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock&lt;/Name&gt;
-&lt;NumElts&gt;6&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;LabVIEW name&lt;/Name&gt;
-&lt;Val&gt;Top Level Clock To Clip&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;VHDL name&lt;/Name&gt;
-&lt;Val&gt;TopLevelClk80&lt;/Val&gt;
-&lt;/String&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Max Freq&lt;/Name&gt;
-&lt;Val&gt;80000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Min Freq&lt;/Name&gt;
-&lt;Val&gt;80000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;EW&gt;
-&lt;Name&gt;Direction&lt;/Name&gt;
-&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
-&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
-&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/EW&gt;
-&lt;String&gt;
-&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
-&lt;Val&gt;80 MHz Clock&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;FPGA Clock&lt;/Name&gt;
-&lt;NumElts&gt;3&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;80 MHz Clock&lt;/Val&gt;
-&lt;/String&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Use Top Clock&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;/Cluster&gt;
-&lt;/Cluster&gt;
-&lt;/Array&gt;
-PXIe-5785 (KU060)/PllClk80/falsefalseFLEXRIO_IO_MODELNI_5785FPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSPXIE_5785__KU060_FPGA_TARGET_FAMILYKINTEXUTARGET_TYPEFPGA</Property>
-				<Property Name="configString.name" Type="Str">200.78MHzMultiplier=128.000000;Divisor=51.00000080 MHz ClockResourceName=80 MHz Clock;TopSignalConnect=PllClk80;ClockSignalName=PllClk80;MinFreq=80000000.000000;MaxFreq=80000000.000000;VariableFreq=0;NomFreq=80000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;AI 0 Data N-10NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-10;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 0 Data N-11NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-11;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 0 Data N-12NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-12;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 0 Data N-13NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-13;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 0 Data N-14NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-14;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 0 Data N-15NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-15;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 0 Data N-1NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-1;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 0 Data N-2NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-2;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 0 Data N-3NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-3;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 0 Data N-4NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-4;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 0 Data N-5NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-5;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 0 Data N-6NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-6;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 0 Data N-7NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-7;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 0 Data N-8NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-8;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 0 Data N-9NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N-9;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 0 Data NNumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 0 Data N;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 1 Data N-10NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-10;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 1 Data N-11NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-11;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 1 Data N-12NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-12;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 1 Data N-13NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-13;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 1 Data N-14NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-14;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 1 Data N-15NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-15;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 1 Data N-1NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-1;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 1 Data N-2NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-2;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 1 Data N-3NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-3;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 1 Data N-4NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-4;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 1 Data N-5NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-5;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 1 Data N-6NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-6;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 1 Data N-7NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-7;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 1 Data N-8NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-8;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 1 Data N-9NumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N-9;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI 1 Data NNumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI 1 Data N;0;ReadMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AI Data ValidNumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AI Data Valid;0;ReadMethodType=boolAO 0 Data N-10ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-10;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 0 Data N-11ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-11;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 0 Data N-12ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-12;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 0 Data N-13ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-13;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 0 Data N-14ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-14;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 0 Data N-15ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-15;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 0 Data N-1ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-1;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 0 Data N-2ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-2;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 0 Data N-3ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-3;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 0 Data N-4ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-4;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 0 Data N-5ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-5;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 0 Data N-6ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-6;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 0 Data N-7ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-7;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 0 Data N-8ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-8;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 0 Data N-9ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N-9;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 0 Data NArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 0 Data N;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 1 Data N-10ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-10;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 1 Data N-11ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-11;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 1 Data N-12ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-12;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 1 Data N-13ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-13;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 1 Data N-14ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-14;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 1 Data N-15ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-15;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 1 Data N-1ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-1;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 1 Data N-2ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-2;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 1 Data N-3ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-3;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 1 Data N-4ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-4;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 1 Data N-5ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-5;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 1 Data N-6ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-6;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 1 Data N-7ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-7;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 1 Data N-8ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-8;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 1 Data N-9ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N-9;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO 1 Data NArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=0;resource=/IO Socket/SignalList/AO 1 Data N;0;WriteMethodType=
-&lt;Type&gt;
-   &lt;FXP&gt;
-      &lt;IntegerWordLength&gt;1&lt;/IntegerWordLength&gt;
-      &lt;Unsigned&gt;false&lt;/Unsigned&gt;
-      &lt;WordLength&gt;12&lt;/WordLength&gt;
-   &lt;/FXP&gt;
-&lt;/Type&gt;AO Ready For InputNumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/AO Ready For Input;0;ReadMethodType=boolData Clock 2xResourceName=IO SocketA_AData Clock 2x;TopSignalConnect=IO_SocketA_ADataClk2xToLv;ClockSignalName=IO_SocketA_ADataClk2xToLv;MinFreq=250000000.000000;MaxFreq=400000000.000000;VariableFreq=1;NomFreq=400000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=45.000000;MaxDutyCycle=55.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;Data ClockResourceName=IO SocketA_AData Clock;TopSignalConnect=IO_SocketA_ADataClkToLV;ClockSignalName=IO_SocketA_ADataClkToLV;MinFreq=125000000.000000;MaxFreq=200000000.000000;VariableFreq=1;NomFreq=200000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=45.000000;MaxDutyCycle=55.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;DIO 0ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 0;0;ReadMethodType=bool;WriteMethodType=boolDIO 1ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 1;0;ReadMethodType=bool;WriteMethodType=boolDIO 2ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 2;0;ReadMethodType=bool;WriteMethodType=boolDIO 3ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 3;0;ReadMethodType=bool;WriteMethodType=boolDIO 4ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 4;0;ReadMethodType=bool;WriteMethodType=boolDIO 5ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 5;0;ReadMethodType=bool;WriteMethodType=boolDIO 6ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 6;0;ReadMethodType=bool;WriteMethodType=boolDIO 7ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/DIO/DIO 7;0;ReadMethodType=bool;WriteMethodType=boolDIO Voltage Selection01b3ed840706364921c5e08e590e69216da7abb93e39619079d4aaf44a252a2b794a31056845501c90b135cc2ffd75ebd9128e1ec7b2a1c7ec414fe6904bfd4d&lt;Array&gt;
-&lt;Name&gt;Generics&lt;/Name&gt;
-&lt;Dimsize&gt;0&lt;/Dimsize&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Generic&lt;/Name&gt;
-&lt;NumElts&gt;5&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Type&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Default value&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Value&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Description&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;/Array&gt;
-&lt;Array&gt;
-&lt;Name&gt;Clock Connections&lt;/Name&gt;
-&lt;Dimsize&gt;3&lt;/Dimsize&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
-&lt;NumElts&gt;2&lt;/NumElts&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock&lt;/Name&gt;
-&lt;NumElts&gt;6&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;LabVIEW name&lt;/Name&gt;
-&lt;Val&gt;Data Clock&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;VHDL name&lt;/Name&gt;
-&lt;Val&gt;DataClkToLV&lt;/Val&gt;
-&lt;/String&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Max Freq&lt;/Name&gt;
-&lt;Val&gt;200000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Min Freq&lt;/Name&gt;
-&lt;Val&gt;125000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;EW&gt;
-&lt;Name&gt;Direction&lt;/Name&gt;
-&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
-&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
-&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
-&lt;Val&gt;1&lt;/Val&gt;
-&lt;/EW&gt;
-&lt;String&gt;
-&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;FPGA Clock&lt;/Name&gt;
-&lt;NumElts&gt;3&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Use Top Clock&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
-&lt;Val&gt;1&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;/Cluster&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
-&lt;NumElts&gt;2&lt;/NumElts&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock&lt;/Name&gt;
-&lt;NumElts&gt;6&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;LabVIEW name&lt;/Name&gt;
-&lt;Val&gt;Data Clock 2x&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;VHDL name&lt;/Name&gt;
-&lt;Val&gt;DataClk2xToLv&lt;/Val&gt;
-&lt;/String&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Max Freq&lt;/Name&gt;
-&lt;Val&gt;400000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Min Freq&lt;/Name&gt;
-&lt;Val&gt;250000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;EW&gt;
-&lt;Name&gt;Direction&lt;/Name&gt;
-&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
-&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
-&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
-&lt;Val&gt;1&lt;/Val&gt;
-&lt;/EW&gt;
-&lt;String&gt;
-&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;FPGA Clock&lt;/Name&gt;
-&lt;NumElts&gt;3&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Use Top Clock&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
-&lt;Val&gt;1&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;/Cluster&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
-&lt;NumElts&gt;2&lt;/NumElts&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock&lt;/Name&gt;
-&lt;NumElts&gt;6&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;LabVIEW name&lt;/Name&gt;
-&lt;Val&gt;Top Level Clock To Clip&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;VHDL name&lt;/Name&gt;
-&lt;Val&gt;TopLevelClk80&lt;/Val&gt;
-&lt;/String&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Max Freq&lt;/Name&gt;
-&lt;Val&gt;80000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Min Freq&lt;/Name&gt;
-&lt;Val&gt;80000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;EW&gt;
-&lt;Name&gt;Direction&lt;/Name&gt;
-&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
-&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
-&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/EW&gt;
-&lt;String&gt;
-&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
-&lt;Val&gt;80 MHz Clock&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;FPGA Clock&lt;/Name&gt;
-&lt;NumElts&gt;3&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;80 MHz Clock&lt;/Val&gt;
-&lt;/String&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Use Top Clock&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;/Cluster&gt;
-&lt;/Cluster&gt;
-&lt;/Array&gt;
-DRAM Bank 03119caa9fb9c07750e2167f77fb302623ff9771e20eeda9937fd0aab8b02357fb3949e188fb7f9ea6bf474defa6ea1fde431b6cba9e372579bb96db7e798fc97&lt;Array&gt;
-&lt;Name&gt;Generics&lt;/Name&gt;
-&lt;Dimsize&gt;0&lt;/Dimsize&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Generic&lt;/Name&gt;
-&lt;NumElts&gt;5&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Type&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Default value&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Value&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Description&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;/Array&gt;
-&lt;Array&gt;
-&lt;Name&gt;Clock Connections&lt;/Name&gt;
-&lt;Dimsize&gt;2&lt;/Dimsize&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
-&lt;NumElts&gt;2&lt;/NumElts&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock&lt;/Name&gt;
-&lt;NumElts&gt;6&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;LabVIEW name&lt;/Name&gt;
-&lt;Val&gt;DataClk&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;VHDL name&lt;/Name&gt;
-&lt;Val&gt;DataClk&lt;/Val&gt;
-&lt;/String&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Max Freq&lt;/Name&gt;
-&lt;Val&gt;500000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Min Freq&lt;/Name&gt;
-&lt;Val&gt;1000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;EW&gt;
-&lt;Name&gt;Direction&lt;/Name&gt;
-&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
-&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
-&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/EW&gt;
-&lt;String&gt;
-&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;FPGA Clock&lt;/Name&gt;
-&lt;NumElts&gt;3&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;IO Socket\Data Clock&lt;/Val&gt;
-&lt;/String&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Use Top Clock&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;/Cluster&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
-&lt;NumElts&gt;2&lt;/NumElts&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock&lt;/Name&gt;
-&lt;NumElts&gt;6&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;LabVIEW name&lt;/Name&gt;
-&lt;Val&gt;SyncPulseClk&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;VHDL name&lt;/Name&gt;
-&lt;Val&gt;SyncPulseClk&lt;/Val&gt;
-&lt;/String&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Max Freq&lt;/Name&gt;
-&lt;Val&gt;100000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Min Freq&lt;/Name&gt;
-&lt;Val&gt;100000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;EW&gt;
-&lt;Name&gt;Direction&lt;/Name&gt;
-&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
-&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
-&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/EW&gt;
-&lt;String&gt;
-&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
-&lt;Val&gt;PXIe_Clk100&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;FPGA Clock&lt;/Name&gt;
-&lt;NumElts&gt;3&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;PXIe_Clk100&lt;/Val&gt;
-&lt;/String&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Use Top Clock&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;/Cluster&gt;
-&lt;/Cluster&gt;
-&lt;/Array&gt;
-DRAM ClockResourceName=DRAM Clock;TopSignalConnect=DramClkLvFpga;ClockSignalName=DramClkLvFpga;MinFreq=267000000.000000;MaxFreq=267000000.000000;VariableFreq=0;NomFreq=267000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;instraction fifo 2"ControlLogic=0;NumberOfElements=1047;Type=1;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=4;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;instraction fifo;DataType=100080000000000100094008000355363400010000000000000000000000000000;DisableOnOverflowUnderflow=FALSE"instraction fifo"ControlLogic=0;NumberOfElements=1047;Type=1;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=4;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;instraction fifo;DataType=100080000000000100094008000355363400010000000000000000000000000000;DisableOnOverflowUnderflow=FALSE"IO ErrorNumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/IO Error;0;ReadMethodType=I32IO ReadyNumberOfSyncRegistersForReadInProject=0;resource=/IO Socket/SignalList/IO Ready;0;ReadMethodType=boolIO Socket9adb9f7e2e15cf68aeff140170d23152IOModuleID:0x109379A4,Version:18.7.0,National Instruments::NI 5785,SyncClock:CLK10&lt;Array&gt;
-&lt;Name&gt;Generics&lt;/Name&gt;
-&lt;Dimsize&gt;0&lt;/Dimsize&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Generic&lt;/Name&gt;
-&lt;NumElts&gt;5&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Type&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Default value&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Value&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;Description&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;/Array&gt;
-&lt;Array&gt;
-&lt;Name&gt;Clock Connections&lt;/Name&gt;
-&lt;Dimsize&gt;3&lt;/Dimsize&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
-&lt;NumElts&gt;2&lt;/NumElts&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock&lt;/Name&gt;
-&lt;NumElts&gt;6&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;LabVIEW name&lt;/Name&gt;
-&lt;Val&gt;Data Clock&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;VHDL name&lt;/Name&gt;
-&lt;Val&gt;DataClkToLV&lt;/Val&gt;
-&lt;/String&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Max Freq&lt;/Name&gt;
-&lt;Val&gt;200000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Min Freq&lt;/Name&gt;
-&lt;Val&gt;125000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;EW&gt;
-&lt;Name&gt;Direction&lt;/Name&gt;
-&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
-&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
-&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
-&lt;Val&gt;1&lt;/Val&gt;
-&lt;/EW&gt;
-&lt;String&gt;
-&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;FPGA Clock&lt;/Name&gt;
-&lt;NumElts&gt;3&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Use Top Clock&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
-&lt;Val&gt;1&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;/Cluster&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
-&lt;NumElts&gt;2&lt;/NumElts&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock&lt;/Name&gt;
-&lt;NumElts&gt;6&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;LabVIEW name&lt;/Name&gt;
-&lt;Val&gt;Data Clock 2x&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;VHDL name&lt;/Name&gt;
-&lt;Val&gt;DataClk2xToLv&lt;/Val&gt;
-&lt;/String&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Max Freq&lt;/Name&gt;
-&lt;Val&gt;400000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Min Freq&lt;/Name&gt;
-&lt;Val&gt;250000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;EW&gt;
-&lt;Name&gt;Direction&lt;/Name&gt;
-&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
-&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
-&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
-&lt;Val&gt;1&lt;/Val&gt;
-&lt;/EW&gt;
-&lt;String&gt;
-&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;FPGA Clock&lt;/Name&gt;
-&lt;NumElts&gt;3&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;&lt;/Val&gt;
-&lt;/String&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Use Top Clock&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
-&lt;Val&gt;1&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;/Cluster&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock Connection&lt;/Name&gt;
-&lt;NumElts&gt;2&lt;/NumElts&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;CLIP Clock&lt;/Name&gt;
-&lt;NumElts&gt;6&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;LabVIEW name&lt;/Name&gt;
-&lt;Val&gt;Top Level Clock To Clip&lt;/Val&gt;
-&lt;/String&gt;
-&lt;String&gt;
-&lt;Name&gt;VHDL name&lt;/Name&gt;
-&lt;Val&gt;TopLevelClk80&lt;/Val&gt;
-&lt;/String&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Max Freq&lt;/Name&gt;
-&lt;Val&gt;80000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;DBL&gt;
-&lt;Name&gt;Min Freq&lt;/Name&gt;
-&lt;Val&gt;80000000.00000000000000&lt;/Val&gt;
-&lt;/DBL&gt;
-&lt;EW&gt;
-&lt;Name&gt;Direction&lt;/Name&gt;
-&lt;Choice&gt;ToCLIP&lt;/Choice&gt;
-&lt;Choice&gt;FromCLIP&lt;/Choice&gt;
-&lt;Choice&gt;Bidirectional&lt;/Choice&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/EW&gt;
-&lt;String&gt;
-&lt;Name&gt;ClockToLinkTo&lt;/Name&gt;
-&lt;Val&gt;80 MHz Clock&lt;/Val&gt;
-&lt;/String&gt;
-&lt;/Cluster&gt;
-&lt;Cluster&gt;
-&lt;Name&gt;FPGA Clock&lt;/Name&gt;
-&lt;NumElts&gt;3&lt;/NumElts&gt;
-&lt;String&gt;
-&lt;Name&gt;Name&lt;/Name&gt;
-&lt;Val&gt;80 MHz Clock&lt;/Val&gt;
-&lt;/String&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Use Top Clock&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;Boolean&gt;
-&lt;Name&gt;Clock From CLIP&lt;/Name&gt;
-&lt;Val&gt;0&lt;/Val&gt;
-&lt;/Boolean&gt;
-&lt;/Cluster&gt;
-&lt;/Cluster&gt;
-&lt;/Array&gt;
-P2P_IQ_to_VST"ControlLogic=0;NumberOfElements=8191;Type=4;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Never Arbitrate;ElementsPerWrite=32;Implementation=2;P2P_IQ_to_VST;DataType=100080000000000100094002000349313600010000000000000000;DisableOnOverflowUnderflow=FALSE"PXIe_Clk100ResourceName=PXIe_Clk100;TopSignalConnect=PxieClk100;ClockSignalName=PxieClk100;MinFreq=100000000.000000;MaxFreq=100000000.000000;VariableFreq=0;NomFreq=100000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;PXIe_CLK200Multiplier=2.000000;Divisor=1.000000PXIe-5785 (KU060)/PllClk80/falsefalseFLEXRIO_IO_MODELNI_5785FPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSPXIE_5785__KU060_FPGA_TARGET_FAMILYKINTEXUTARGET_TYPEFPGA</Property>
-			</Item>
 			<Item Name="Dependencies" Type="Dependencies">
 				<Item Name="instr.lib" Type="Folder">
 					<Item Name="xsimk6C9BD6BA82F44DA8A08D75EF2AE906AE.dll" Type="Document" URL="/&lt;instrlib&gt;/_niInstr/DSP/v1/FPGA/Private/HB Interpolator/HbInterp4cps2xV5SimFiles/xsim.dir/HbInterpMultipleInputSpc2xOcIpin/xsimk6C9BD6BA82F44DA8A08D75EF2AE906AE.dll"/>
@@ -50038,16 +50063,16 @@ P2P_IQ_to_VST"ControlLogic=0;NumberOfElements=8191;Type=4;ReadArbs=Arbitrate if 
 					<Item Name="lvSimController.dll" Type="Document" URL="/&lt;vilib&gt;/rvi/Simulation/lvSimController.dll"/>
 					<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
 				</Item>
-				<Item Name="4 DDS.vi" Type="VI" URL="../fpga/vis/4 DDS.vi"/>
-				<Item Name="pulse Tx.vi" Type="VI" URL="../fpga/vis/pulse Tx.vi"/>
-				<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 				<Item Name="IQ Data.ctl" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/DSP/v1/Shared/Public/IQ Data.ctl"/>
 				<Item Name="Count Up.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/Basic Elements/v1/FPGA/Public/Count Up.vi"/>
 				<Item Name="Count Up U64.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/Basic Elements/v1/FPGA/Private/Count Up U64.vi"/>
 				<Item Name="Count Up U32.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/Basic Elements/v1/FPGA/Private/Count Up U32.vi"/>
+				<Item Name="4 DDS.vi" Type="VI" URL="../fpga/vis/4 DDS.vi"/>
+				<Item Name="pulse Tx.vi" Type="VI" URL="../fpga/vis/pulse Tx.vi"/>
 				<Item Name="Synchronous Latch.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/Basic Elements/v1/FPGA/Public/Synchronous Latch.vi"/>
-				<Item Name="Count Up U16.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/Basic Elements/v1/FPGA/Private/Count Up U16.vi"/>
 				<Item Name="Detect Rising Edge.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/Basic Elements/v1/FPGA/Public/Detect Rising Edge.vi"/>
+				<Item Name="Count Up U16.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/Basic Elements/v1/FPGA/Private/Count Up U16.vi"/>
+				<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 				<Item Name="Analog Edge Trigger.vim" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/FlexRIO/API/FPGA/v1/Analog Edge Trigger.vim"/>
 				<Item Name="Channel Packer.vim" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/FlexRIO/API/FPGA/v1/Channel Packer.vim"/>
 				<Item Name="Stream State.ctl" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/Streaming/v1/Common/Stream State.ctl"/>
@@ -50169,7 +50194,7 @@ P2P_IQ_to_VST"ControlLogic=0;NumberOfElements=8191;Type=4;ReadArbs=Arbitrate if 
 					<Property Name="Comp.Xilinx.UseRecommended" Type="Bool">true</Property>
 					<Property Name="DefaultBuildSpec" Type="Bool">true</Property>
 					<Property Name="DestinationDirectory" Type="Path">FPGA Bitfiles</Property>
-					<Property Name="NI.LV.FPGA.LastCompiledBitfilePath" Type="Path">/C/Users/PXIe8108_Demo/Documents/CHAIM DATA/chaim/5785_sync_for_elbit/tx_pulse/EMEA_ADG_EW_secnario_TX_PDW_to_pulses/FPGA Bitfiles/P2P_Pulse.lvbitx</Property>
+					<Property Name="NI.LV.FPGA.LastCompiledBitfilePath" Type="Path">/C/Users/PXIe8108_Demo/Documents/CHAIM DATA/chaim/5785_sync_for_elbit/tx_pulse/pulse Tx Folder_lv_21/EMEA_ADG_EW_secnario_TX_PDW_to_pulses/FPGA Bitfiles/P2P_Pulse.lvbitx</Property>
 					<Property Name="NI.LV.FPGA.LastCompiledBitfilePathRelativeToProject" Type="Path">FPGA Bitfiles/P2P_Pulse.lvbitx</Property>
 					<Property Name="ProjectPath" Type="Path">/C/Users/PXIe8108_Demo/Documents/CHAIM DATA/chaim/5785_sync_for_elbit/tx_pulse/pulse Tx Folder_lv_21/EMEA_ADG_EW_secnario_TX_PDW_to_pulses/pulse Tx.lvproj</Property>
 					<Property Name="RelativePath" Type="Bool">true</Property>
@@ -50181,9 +50206,7 @@ P2P_IQ_to_VST"ControlLogic=0;NumberOfElements=8191;Type=4;ReadArbs=Arbitrate if 
 				</Item>
 			</Item>
 		</Item>
-		<Item Name="P2P_vst_ini.vi" Type="VI" URL="../pulse_tx_vis/P2P_vst_ini.vi"/>
-		<Item Name="fpga status vst p2p.vi" Type="VI" URL="../pulse_tx_vis/fpga status vst p2p.vi"/>
-		<Item Name="sync_and_trig_p2p.vi" Type="VI" URL="../pulse_tx_vis/sync_and_trig_p2p.vi"/>
+		<Item Name="update config.vi" Type="VI" URL="../pulse_tx_vis/update config.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Property Name="NI.SortType" Type="Int">2</Property>
 			<Item Name="instr.lib" Type="Folder">
@@ -50195,26 +50218,18 @@ P2P_IQ_to_VST"ControlLogic=0;NumberOfElements=8191;Type=4;ReadArbs=Arbitrate if 
 				<Item Name="niInstr Register Bus v0 Host.lvlib" Type="Library" URL="/&lt;instrlib&gt;/_niInstr/Register Bus/v0/Host/niInstr Register Bus v0 Host.lvlib"/>
 				<Item Name="niInstr Streaming v1 Common.lvlib" Type="Library" URL="/&lt;instrlib&gt;/_niInstr/Streaming/v1/Common/niInstr Streaming v1 Common.lvlib"/>
 				<Item Name="niInstr Streaming v1 Host.lvlib" Type="Library" URL="/&lt;instrlib&gt;/_niInstr/Streaming/v1/Host/niInstr Streaming v1 Host.lvlib"/>
-				<Item Name="niRFSG Configure Configuration List Step Trigger Digital Edge.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Configure Configuration List Step Trigger Digital Edge.vi"/>
+				<Item Name="niRFSG Close.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Close.vi"/>
+				<Item Name="niRFSG Commit.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Commit.vi"/>
+				<Item Name="niRFSG Configure Output Enabled.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Configure Output Enabled.vi"/>
 				<Item Name="niRFSG Configure Ref Clock.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Configure Ref Clock.vi"/>
-				<Item Name="niRFSG Configure Script Trigger Digital Edge.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Configure Script Trigger Digital Edge.vi"/>
-				<Item Name="niRFSG Configure Script Trigger Digital Level.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Configure Script Trigger Digital Level.vi"/>
-				<Item Name="niRFSG Configure Script Trigger Software.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Configure Script Trigger Software.vi"/>
-				<Item Name="niRFSG Configure Start Trigger Digital Edge.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Configure Start Trigger Digital Edge.vi"/>
-				<Item Name="niRFSG Configure Start Trigger P2P Endpoint Fullness.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Configure Start Trigger P2P Endpoint Fullness.vi"/>
-				<Item Name="niRFSG Configure Start Trigger Software.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Configure Start Trigger Software.vi"/>
-				<Item Name="niRFSG Configure Trigger.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Configure Trigger.vi"/>
-				<Item Name="niRFSG Disable Configuration List Step Trigger.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Disable Configuration List Step Trigger.vi"/>
-				<Item Name="niRFSG Disable Script Trigger.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Disable Script Trigger.vi"/>
-				<Item Name="niRFSG Disable Start Trigger.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Disable Start Trigger.vi"/>
+				<Item Name="niRFSG Configure RF.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Configure RF.vi"/>
 				<Item Name="niRFSG Get Session Reference.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Get Session Reference.vi"/>
 				<Item Name="niRFSG Get Stream Endpoint Handle.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Get Stream Endpoint Handle.vi"/>
 				<Item Name="niRFSG Initialize.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Initialize.vi"/>
+				<Item Name="niRFSG Initiate.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Initiate.vi"/>
 				<Item Name="niRFSG IVI Error Converter.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG IVI Error Converter.vi"/>
 				<Item Name="niRFSG Ref Clock Sources.ctl" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Ref Clock Sources.ctl"/>
-				<Item Name="niRFSG Script Trigger IDs.ctl" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Script Trigger IDs.ctl"/>
 				<Item Name="niRFSG Stream Endpoint Names.ctl" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Stream Endpoint Names.ctl"/>
-				<Item Name="niRFSG Trigger Terminals.ctl" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Trigger Terminals.ctl"/>
 				<Item Name="niScope Close.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/niScope Close.vi"/>
 				<Item Name="niScope Configure Chan Characteristics.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Configure/Vertical/niScope Configure Chan Characteristics.vi"/>
 				<Item Name="niScope Configure Clock.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Configure/Horizontal/niScope Configure Clock.vi"/>
@@ -50238,7 +50253,6 @@ P2P_IQ_to_VST"ControlLogic=0;NumberOfElements=8191;Type=4;ReadArbs=Arbitrate if 
 				<Item Name="niScope trigger source.ctl" Type="VI" URL="/&lt;instrlib&gt;/niScope/Controls/niScope trigger source.ctl"/>
 				<Item Name="niTClk Configure For Homogeneous Triggers.vi" Type="VI" URL="/&lt;instrlib&gt;/niTClk/niTClk.llb/niTClk Configure For Homogeneous Triggers.vi"/>
 				<Item Name="niTClk Fill In Error Info.vi" Type="VI" URL="/&lt;instrlib&gt;/niTClk/niTClk.llb/niTClk Fill In Error Info.vi"/>
-				<Item Name="niTClk Initiate.vi" Type="VI" URL="/&lt;instrlib&gt;/niTClk/niTClk.llb/niTClk Initiate.vi"/>
 				<Item Name="niTClk Synchronize.vi" Type="VI" URL="/&lt;instrlib&gt;/niTClk/niTClk.llb/niTClk Synchronize.vi"/>
 				<Item Name="niUsrpRio Config v1 Host.lvlib" Type="Library" URL="/&lt;instrlib&gt;/niUsrpRio/Config/v1/Host/niUsrpRio Config v1 Host.lvlib"/>
 				<Item Name="niUsrpRio Config v1 Shared.lvlib" Type="Library" URL="/&lt;instrlib&gt;/niUsrpRio/Config/v1/Shared/niUsrpRio Config v1 Shared.lvlib"/>
@@ -50325,6 +50339,8 @@ P2P_IQ_to_VST"ControlLogic=0;NumberOfElements=8191;Type=4;ReadArbs=Arbitrate if 
 				<Item Name="NI_MABase.lvlib" Type="Library" URL="/&lt;vilib&gt;/measure/NI_MABase.lvlib"/>
 				<Item Name="NI_MAPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/measure/NI_MAPro.lvlib"/>
 				<Item Name="niP2P Create Peer to Peer Stream.vi" Type="VI" URL="/&lt;vilib&gt;/niP2P/niP2P.llb/niP2P Create Peer to Peer Stream.vi"/>
+				<Item Name="niP2P Destroy Peer to Peer Stream.vi" Type="VI" URL="/&lt;vilib&gt;/niP2P/niP2P.llb/niP2P Destroy Peer to Peer Stream.vi"/>
+				<Item Name="niP2P Disable Peer to Peer Stream.vi" Type="VI" URL="/&lt;vilib&gt;/niP2P/niP2P.llb/niP2P Disable Peer to Peer Stream.vi"/>
 				<Item Name="niP2P Library Name.vi" Type="VI" URL="/&lt;vilib&gt;/niP2P/niP2P.llb/niP2P Library Name.vi"/>
 				<Item Name="niP2P Merge Errors.vi" Type="VI" URL="/&lt;vilib&gt;/niP2P/niP2P.llb/niP2P Merge Errors.vi"/>
 				<Item Name="nisyscfg.lvlib" Type="Library" URL="/&lt;vilib&gt;/nisyscfg/nisyscfg.lvlib"/>
@@ -50391,6 +50407,7 @@ P2P_IQ_to_VST"ControlLogic=0;NumberOfElements=8191;Type=4;ReadArbs=Arbitrate if 
 			<Item Name="niTClk_64.dll" Type="Document" URL="niTClk_64.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="P2P_Pulse.lvbitx" Type="Document" URL="../FPGA Bitfiles/P2P_Pulse.lvbitx"/>
 			<Item Name="pdw.ctl" Type="VI" URL="../pulse_tx_vis/pdw.ctl"/>
 			<Item Name="pulse Tx 16 spc.vi" Type="VI" URL="../fpga/vis/pulse Tx 16 spc.vi"/>
 			<Item Name="pulse Tx.vi" Type="VI" URL="../fpga/vis/pulse Tx.vi"/>
