@@ -1,3 +1,5 @@
 IQ.tdms
 *.m4a
 *.wav
+pulse Tx.aliases
+pulse Tx.lvlps
