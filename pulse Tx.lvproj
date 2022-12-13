@@ -78,6 +78,7 @@
 		<Item Name="vis" Type="Folder">
 			<Item Name="find device.vi" Type="VI" URL="../vis/find device.vi"/>
 		</Item>
+		<Item Name="new_ui.vi" Type="VI" URL="../pulse_tx_vis/new_ui.vi"/>
 		<Item Name="tx poulse host.vi" Type="VI" URL="../pulse_tx_vis/tx poulse host.vi"/>
 		<Item Name="USRP 294xR; 295xR 200 MSps" Type="FPGA Target">
 			<Property Name="AutoRun" Type="Bool">false</Property>
@@ -2047,6 +2048,18 @@
 					<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 					<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 				</Item>
+				<Item Name="array to data claster.vi" Type="VI" URL="../fpga/vis/array to data claster.vi"/>
+				<Item Name="Create Resources.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/niUSRP/Reference FPGA/SubVIs/Create Resources.vi"/>
+				<Item Name="IQ Data.ctl" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/DSP/v1/Shared/Public/IQ Data.ctl"/>
+				<Item Name="IQ Gain.ctl" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/DSP/v1/Shared/Public/IQ Gain.ctl"/>
+				<Item Name="IQ Impairments.ctl" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/DSP/v1/Shared/Public/IQ Impairments.ctl"/>
+				<Item Name="LEDs.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/niUSRP/Reference FPGA/SubVIs/LEDs.vi"/>
+				<Item Name="mode_type.ctl" Type="VI" URL="../pulse_tx_vis/mode_type.ctl"/>
+				<Item Name="Process.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/Register Bus/v1/FPGA/Public/Process.vi"/>
+				<Item Name="Process.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/niUsrpRio/Config/v1/FPGA/Public/Process.vi"/>
+				<Item Name="Read Cmd Data.ctl" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/_niInstr/Register Bus/v1/FPGA/Public/Read Cmd Data.ctl"/>
+				<Item Name="Registers.vi" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/niUSRP/Reference FPGA/SubVIs/Registers.vi"/>
+				<Item Name="set num to enum.vi" Type="VI" URL="../fpga/vis/set num to enum.vi"/>
 			</Item>
 			<Item Name="Build Specifications" Type="Build">
 				<Item Name="pulse_Tx_one_channel_usrp" Type="{F4C5E96F-7410-48A5-BB87-3559BC9B167F}">
@@ -52821,6 +52834,15 @@ P2P_IQ_to_VST"ControlLogic=0;NumberOfElements=8191;Type=4;ReadArbs=Arbitrate if 
 					<Item Name="Release Semaphore Reference.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Release Semaphore Reference.vi"/>
 					<Item Name="RemoveNamedSemaphorePrefix.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/RemoveNamedSemaphorePrefix.vi"/>
 				</Item>
+				<Item Name="4 DDS.vi" Type="VI" URL="../fpga/vis/4 DDS.vi"/>
+				<Item Name="pulse Tx.vi" Type="VI" URL="../fpga/vis/pulse Tx.vi"/>
+				<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
+				<Item Name="secnario config.ctl" Type="VI" URL="../pulse_tx_vis/secnario config.ctl"/>
+				<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
+					<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+				</Item>
+				<Item Name="Analog Edge Trigger.vim" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/FlexRIO/API/FPGA/v1/Analog Edge Trigger.vim"/>
+				<Item Name="Channel Packer.vim" Type="VI" URL="../../../../../../../../../Program Files/National Instruments/LabVIEW 2022/instr.lib/FlexRIO/API/FPGA/v1/Channel Packer.vim"/>
 			</Item>
 			<Item Name="Build Specifications" Type="Build">
 				<Item Name="Chaim_Personality_5785_FPGA_ver2" Type="{F4C5E96F-7410-48A5-BB87-3559BC9B167F}">
@@ -52962,6 +52984,7 @@ P2P_IQ_to_VST"ControlLogic=0;NumberOfElements=8191;Type=4;ReadArbs=Arbitrate if 
 				<Item Name="niRFSG IVI Error Converter.vi" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG IVI Error Converter.vi"/>
 				<Item Name="niRFSG Ref Clock Sources.ctl" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Ref Clock Sources.ctl"/>
 				<Item Name="niRFSG Stream Endpoint Names.ctl" Type="VI" URL="/&lt;instrlib&gt;/niRFSG/niRFSG.llb/niRFSG Stream Endpoint Names.ctl"/>
+				<Item Name="niScope clock sync pulse source.ctl" Type="VI" URL="/&lt;instrlib&gt;/niScope/Controls/niScope clock sync pulse source.ctl"/>
 				<Item Name="niScope Close.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/niScope Close.vi"/>
 				<Item Name="niScope Configure Chan Characteristics.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Configure/Vertical/niScope Configure Chan Characteristics.vi"/>
 				<Item Name="niScope Configure Clock.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Configure/Horizontal/niScope Configure Clock.vi"/>
@@ -52969,20 +52992,56 @@ P2P_IQ_to_VST"ControlLogic=0;NumberOfElements=8191;Type=4;ReadArbs=Arbitrate if 
 				<Item Name="niScope Configure Trigger (poly).vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Configure/Trigger/niScope Configure Trigger (poly).vi"/>
 				<Item Name="niScope Configure Trigger Digital.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Configure/Trigger/niScope Configure Trigger Digital.vi"/>
 				<Item Name="niScope Configure Trigger Edge.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Configure/Trigger/niScope Configure Trigger Edge.vi"/>
+				<Item Name="niScope Configure Trigger Glitch.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Configure/Trigger/niScope Configure Trigger Glitch.vi"/>
 				<Item Name="niScope Configure Trigger Hysteresis.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Configure/Trigger/niScope Configure Trigger Hysteresis.vi"/>
 				<Item Name="niScope Configure Trigger Immediate.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Configure/Trigger/niScope Configure Trigger Immediate.vi"/>
+				<Item Name="niScope Configure Trigger Runt.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Configure/Trigger/niScope Configure Trigger Runt.vi"/>
+				<Item Name="niScope Configure Trigger Software.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Configure/Trigger/niScope Configure Trigger Software.vi"/>
+				<Item Name="niScope Configure Trigger Width.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Configure/Trigger/niScope Configure Trigger Width.vi"/>
 				<Item Name="niScope Configure Trigger Window.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Configure/Trigger/niScope Configure Trigger Window.vi"/>
 				<Item Name="niScope Configure Vertical.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Configure/Vertical/niScope Configure Vertical.vi"/>
+				<Item Name="niScope Configure Video Trigger.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Configure/Trigger/niScope Configure Video Trigger.vi"/>
 				<Item Name="niScope Fetch (poly).vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Fetch (poly).vi"/>
+				<Item Name="niScope Fetch Binary 8.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Fetch Binary 8.vi"/>
+				<Item Name="niScope Fetch Binary 16.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Fetch Binary 16.vi"/>
+				<Item Name="niScope Fetch Binary 32.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Fetch Binary 32.vi"/>
+				<Item Name="niScope Fetch Cluster Complex Double.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Fetch Cluster Complex Double.vi"/>
+				<Item Name="niScope Fetch Cluster.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Fetch Cluster.vi"/>
+				<Item Name="niScope Fetch Complex Double.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Fetch Complex Double.vi"/>
+				<Item Name="niScope Fetch Complex WDT.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Fetch Complex WDT.vi"/>
+				<Item Name="niScope Fetch Error Chain.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Fetch Error Chain.vi"/>
+				<Item Name="niScope Fetch WDT.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Fetch WDT.vi"/>
+				<Item Name="niScope Fetch.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Fetch.vi"/>
 				<Item Name="niScope Get Channel Name (Poly).vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Utility/niScope Get Channel Name (Poly).vi"/>
 				<Item Name="niScope Get Channel Name From String.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Utility/niScope Get Channel Name From String.vi"/>
+				<Item Name="niScope Get Channel Name.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Utility/niScope Get Channel Name.vi"/>
+				<Item Name="niScope Get Session Reference.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Utility/niScope Get Session Reference.vi"/>
+				<Item Name="niScope glitch condition.ctl" Type="VI" URL="/&lt;instrlib&gt;/niScope/Controls/niScope glitch condition.ctl"/>
 				<Item Name="niScope Initialize With Options.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/niScope Initialize With Options.vi"/>
 				<Item Name="niScope Initiate Acquisition.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Initiate Acquisition.vi"/>
 				<Item Name="niScope input clock source.ctl" Type="VI" URL="/&lt;instrlib&gt;/niScope/Controls/niScope input clock source.ctl"/>
+				<Item Name="niScope LabVIEW Error.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Utility/niScope LabVIEW Error.vi"/>
+				<Item Name="niScope Multi Fetch Binary 8.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Multi Fetch Binary 8.vi"/>
+				<Item Name="niScope Multi Fetch Binary 16.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Multi Fetch Binary 16.vi"/>
+				<Item Name="niScope Multi Fetch Binary 32.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Multi Fetch Binary 32.vi"/>
+				<Item Name="niScope Multi Fetch Cluster Complex Double.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Multi Fetch Cluster Complex Double.vi"/>
+				<Item Name="niScope Multi Fetch Cluster.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Multi Fetch Cluster.vi"/>
+				<Item Name="niScope Multi Fetch Complex Double.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Multi Fetch Complex Double.vi"/>
+				<Item Name="niScope Multi Fetch Complex WDT.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Multi Fetch Complex WDT.vi"/>
 				<Item Name="niScope Multi Fetch WDT.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Multi Fetch WDT.vi"/>
+				<Item Name="niScope Multi Fetch.vi" Type="VI" URL="/&lt;instrlib&gt;/niScope/Acquire/Fetch/niScope Multi Fetch.vi"/>
+				<Item Name="niScope output clock source.ctl" Type="VI" URL="/&lt;instrlib&gt;/niScope/Controls/niScope output clock source.ctl"/>
+				<Item Name="niScope polarity.ctl" Type="VI" URL="/&lt;instrlib&gt;/niScope/Controls/niScope polarity.ctl"/>
+				<Item Name="niScope signal format.ctl" Type="VI" URL="/&lt;instrlib&gt;/niScope/Controls/niScope signal format.ctl"/>
+				<Item Name="niScope timestamp type.ctl" Type="VI" URL="/&lt;instrlib&gt;/niScope/Controls/niScope timestamp type.ctl"/>
 				<Item Name="niScope trigger coupling.ctl" Type="VI" URL="/&lt;instrlib&gt;/niScope/Controls/niScope trigger coupling.ctl"/>
+				<Item Name="niScope trigger polarity.ctl" Type="VI" URL="/&lt;instrlib&gt;/niScope/Controls/niScope trigger polarity.ctl"/>
 				<Item Name="niScope trigger slope.ctl" Type="VI" URL="/&lt;instrlib&gt;/niScope/Controls/niScope trigger slope.ctl"/>
+				<Item Name="niScope trigger source digital.ctl" Type="VI" URL="/&lt;instrlib&gt;/niScope/Controls/niScope trigger source digital.ctl"/>
 				<Item Name="niScope trigger source.ctl" Type="VI" URL="/&lt;instrlib&gt;/niScope/Controls/niScope trigger source.ctl"/>
+				<Item Name="niScope trigger window mode.ctl" Type="VI" URL="/&lt;instrlib&gt;/niScope/Controls/niScope trigger window mode.ctl"/>
+				<Item Name="niScope tv event.ctl" Type="VI" URL="/&lt;instrlib&gt;/niScope/Controls/niScope tv event.ctl"/>
+				<Item Name="niScope vertical coupling.ctl" Type="VI" URL="/&lt;instrlib&gt;/niScope/Controls/niScope vertical coupling.ctl"/>
 				<Item Name="niTClk Configure For Homogeneous Triggers.vi" Type="VI" URL="/&lt;instrlib&gt;/niTClk/niTClk.llb/niTClk Configure For Homogeneous Triggers.vi"/>
 				<Item Name="niTClk Fill In Error Info.vi" Type="VI" URL="/&lt;instrlib&gt;/niTClk/niTClk.llb/niTClk Fill In Error Info.vi"/>
 				<Item Name="niTClk Synchronize.vi" Type="VI" URL="/&lt;instrlib&gt;/niTClk/niTClk.llb/niTClk Synchronize.vi"/>
@@ -53121,6 +53180,9 @@ P2P_IQ_to_VST"ControlLogic=0;NumberOfElements=8191;Type=4;ReadArbs=Arbitrate if 
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="niRFSG_64.dll" Type="Document" URL="niRFSG_64.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="niScope_64.dll" Type="Document" URL="niScope_64.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="nistreaming.dll" Type="Document" URL="/&lt;resource&gt;/nistreaming.dll"/>
