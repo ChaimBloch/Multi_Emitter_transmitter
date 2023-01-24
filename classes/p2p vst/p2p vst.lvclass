@@ -63,13 +63,13 @@
 		<Property Name="NI.ClassItem.State" Type="Int">1107821072</Property>
 	</Item>
 	<Item Name="sync and trig.vi" Type="VI" URL="../sync and trig.vi">
-		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%*!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#:!=!!?!!!2$X!S=#"W=X1O&lt;(:D&lt;'&amp;T=Q!,=$*Q)(:T&gt;#"P&gt;81!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!G1(!!(A!!%1^Q-H!A&gt;H.U,GRW9WRB=X-!#H!S=#"W=X1A;7Y!!&amp;1!]!!-!!-!"!!%!!5!"!!%!!1!"!!'!!1!"!!(!Q!!?!!!$1A!!!!!!!!!!!!!D1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!!!!!!#1!!!!!!%!#!!!!!!</Property>
+		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%S!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#:!=!!?!!!2$X!S=#"W=X1O&lt;(:D&lt;'&amp;T=Q!,=$*Q)(:T&gt;#"P&gt;81!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!.1!I!"UZV&lt;76S;7-!(%"!!!(`````!!=/&gt;'FN:3"D97RJ9H*B&gt;'5!!#:!=!!?!!!2$X!S=#"W=X1O&lt;(:D&lt;'&amp;T=Q!+=$*Q)(:T&gt;#"J&lt;A!!6!$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!)!!E$!!"Y!!!.#!!!!!!!!!!!!!#.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!##!!!!*!!!!!!!1!+!!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+		<Property Name="NI.ClassItem.Flags" Type="Int">1073741824</Property>
 		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
 		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-		<Property Name="NI.ClassItem.State" Type="Int">1107821072</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1082130960</Property>
 	</Item>
 	<Item Name="update config.vi" Type="VI" URL="../update config.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!.Z!!!!(!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!%U!+!!VN;7YA:H*F=86F&lt;G.Z!".!#A!.&lt;7&amp;Y)':S:8&amp;V:7ZD?1!G1(!!(A!!%1^Q-H!A&gt;H.U,GRW9WRB=X-!#X!S=#"W=X1A&lt;X6U!!1!!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!"Y!.`````]!!S%!A!!!!!!"!!1!!!!"!!!!!!!!!$:!=!!0"GZJ5E:42Q!!!1!*!!!B!)!!!!!!!1!%!!!!!1!!!!!!!!VS:8.P&gt;8*D:3"O97VF!"B!1!!"`````Q!+#H:T&gt;&amp;^E:8:J9W5!!!^!#A!)5E9A:W&amp;J&lt;C!!!"&amp;!"Q!,9H6G:G6S)(.J?G5!(5!+!":D:7ZU:8)A:H*F=86F&lt;G.Z)#B)?CEA!!!61!I!$V!S5#"T97VQ&lt;'5A=G&amp;U:1"$1"9!"!V65V*1)#UA-4AQ45B[$T5X/$5A,3!S+D%Y-%V)?AUV.TAV)#UA-SYS2UB[#6!S5#!N)&amp;:46!!%&lt;7^E:1!!8!$R!!!!!!!!!!%6&lt;GFS;7^@=G6T&lt;X6S9W6@;'-O9X2M!$Z!.`````]!"3%!A!!!!!!"!!1!!!!"!!!!!!!!$7ZJ=GFP5G6T&lt;X6S9W5.=G6T&lt;X6S9W5A&lt;G&amp;N:1!71%!!!@````]!%1BE:8:J9W6T=Q!!%%!B#G&gt;F&lt;C"G&lt;X)A:'9!!"6!#A!0&lt;7FO)&amp;"8)#!A)#!A)#!A!"6!#A!0&lt;7&amp;Y)'&gt;B=#!A)#!A)#!A!".!#A!.:'6U:7.U;7^O)'*B=A!I1#%D='6B;S"E:82F9X1A)#!A)#!A)#!A)#!A)#!A)#!A)#!A)#!!'E"1!!1!&amp;!!6!"9!&amp;QN3?#"T:82U;7ZH=Q")!0%!!!!!!!!!!1^V=W6S)'.P&lt;G:J:SZD&gt;'Q!-%"1!!E!#Q!-!!U!$A!0!"!!%A!4!"A4&gt;8.F=C"D&lt;WZG;7&gt;V=G&amp;U;7^O=Q!G1(!!(A!!%1^Q-H!A&gt;H.U,GRW9WRB=X-!#H!S=#"W=X1A;7Y!!&amp;1!]!!-!!-!"!!&amp;!!9!"Q!(!!=!"Q!)!!=!'1!;!Q!!?!!!$1A!!!E!!!!*!!!!D1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!!A!!!#3!!!!!!%!'Q!!!!!</Property>
