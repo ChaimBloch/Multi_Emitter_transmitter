@@ -1,5 +1,5 @@
 *.m4a
 *.tdms
 *.wav
-pulse Tx.aliases
-pulse Tx.lvlps
+*.aliases
+*.lvlps
