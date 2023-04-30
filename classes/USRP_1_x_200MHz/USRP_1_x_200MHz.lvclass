@@ -78,7 +78,7 @@
 		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
 		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-		<Property Name="NI.ClassItem.State" Type="Int">1350574608</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1352671760</Property>
 	</Item>
 	<Item Name="update states from tdms.vi" Type="VI" URL="../update states from tdms.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!)B!!!!$Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!(5!]1!!!!!!!!!"$W2F&gt;GFD:6^N&lt;W2F,G.U&lt;!"&gt;1"9!"1UV.TAV)#UA-SYS2UB[$45X/$5A-CIR,D:(3(I*5$*1)#UA6F.5$6645F!A,3!R/$".3(I.5$*1)&amp;2Y)'&amp;O:#"3?!!/&gt;'2N=S"G;7RF)'VP:'5!!$:!=!!?!!!:&amp;V645F"@-6^Y8T)Q-%V)?CZM&gt;G.M98.T!".65V*18T&amp;@?&amp;]S-$".3(IA&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!"1!+!!!91(!!#!!"!!A!%A!!#&amp;*')'&gt;B;7YA!!!G1(!!#!!"!!A!%A!!&amp;E.F&lt;H2F=C"G=G6R&gt;76O9XEA+%B[+3!!!"Z!=!!)!!%!#!!3!!!05$*1)(.B&lt;8"M:3"S982F!#*!5!!$!!E!#A!,&amp;7:S&lt;X1A='&amp;O:7QA=G6G:8*B&lt;G.F=Q!W1(!!(A!!'2&gt;65V*18T&amp;@?&amp;]S-$".3(IO&lt;(:D&lt;'&amp;T=Q!366.35&amp;]R8XB@-D!Q45B[)'FO!!"5!0!!$!!$!!1!"1!'!!1!"!!%!!1!"Q!%!!Q!$1-!!(A!!!U)!!!!!!!!#1!!!)U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!!!!!!)!!!!EA!!!!!"!!Y!!!!!</Property>
