@@ -96,7 +96,7 @@
 		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
 		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-		<Property Name="NI.ClassItem.State" Type="Int">1350574608</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1353196048</Property>
 	</Item>
 	<Item Name="write memory.vi" Type="VI" URL="../write memory.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;+!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$:!=!!?!!!:&amp;V645F"@-6^Y8T)Q-%V)?CZM&gt;G.M98.T!".65V*18T&amp;@?&amp;]S-$".3(IA&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!$5!)!!&gt;/&gt;7VF=GFD!"2!1!!"`````Q!("UF2)'2B&gt;'%!.E"Q!"Y!!"E866.35&amp;]R8XB@-D!Q45B[,GRW9WRB=X-!%F645F"@-6^Y8T)Q-%V)?C"J&lt;A!!6!$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!)!!E$!!"Y!!!.#!!!!!!!!!!!!!#.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!#!!!!*!!!!!!!1!+!!!!!!</Property>
@@ -105,7 +105,7 @@
 		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
 		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-		<Property Name="NI.ClassItem.State" Type="Int">1115685392</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1117782544</Property>
 	</Item>
 	<Item Name="write to fifo.vi" Type="VI" URL="../write to fifo.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'-!!!!$!!W1(!!(A!!'2&gt;65V*18T&amp;@?&amp;]S-$".3(IO&lt;(:D&lt;'&amp;T=Q!366.35&amp;]R8XB@-D!Q45B[)'FO!!!%!!!!.E"Q!"Y!!"E866.35&amp;]R8XB@-D!Q45B[,GRW9WRB=X-!%V645F"@-6^Y8T)Q-%V)?C"P&gt;81!&amp;%!B$W2P&lt;G5A&gt;X*J&gt;'5A:GFM:1!F1!=!(GZV&lt;3"P:C"Q&gt;7RT:8-A=W6O&gt;#"U&lt;S"U;'5A2F"(11!!%E!B$(*P&lt;WUA&lt;WYA:GFG&lt;Q!!$%!B"H.U982V=Q!!#U!$!!2D&lt;W2F!!!11$$`````"H.P&gt;8*D:1!!)%"1!!-!"A!(!!A4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!71&amp;!!!Q!'!!=!#!FF=H*P=C"P&gt;81!&lt;!$Q!"!!!!!"!!%!!1!#!!%!!Q!"!!1!!1!&amp;!!E!!1!"!!%!#A-!!1A!!*)!!!!!!!!!!!!!!!!!!!#.!!!!!!!!!!E!!!!!!!!!#1!!!!!!!!!*!!!!#A!!!!!!!!!!!!!!!!!!!!U,!!!!!1!,!!!!!!</Property>
